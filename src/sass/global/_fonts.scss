@@ -1,49 +1,29 @@
 @font-face {
   font-style: normal;
-  font-weight: 400;
-  font-family: "Inter";
-  font-display: swap;
-  src:
-    url("../fonts/Inter-Regular.woff2") format("woff2"),
-    url("../fonts/Inter-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
   src:
-    url("../fonts/Montserrat-Regular.woff2") format("woff2"),
-    url("../fonts/Montserrat-Regular.woff") format("woff");
+    url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 500;
-  font-family: "Montserrat";
+  font-family: "Raleway";
   font-display: swap;
   src:
-    url("../fonts/Montserrat-Medium.woff2") format("woff2"),
-    url("../fonts/Montserrat-Medium.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Open Sans";
-  font-display: swap;
-  src:
-    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
-    url("../fonts/OpenSans-Regular.woff") format("woff");
+    url("../fonts/Raleway-Medium.woff2") format("woff2"),
+    url("../fonts/Raleway-Medium.woff") format("woff");
 }
 
 @font-face {
   font-style: normal;
   font-weight: 600;
-  font-family: "Open Sans";
+  font-family: "Raleway";
   font-display: swap;
   src:
-    url("../fonts/OpenSans-Semibold.woff2") format("woff2"),
-    url("../fonts/OpenSans-Semibold.woff") format("woff");
+    url("../fonts/Raleway-Semibold.woff2") format("woff2"),
+    url("../fonts/Raleway-Semibold.woff") format("woff");
 }

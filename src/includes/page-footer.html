@@ -1,120 +1,65 @@
 <footer class="page-footer">
-  <div class="page-footer__top">
-    <div class="container">
-      <div class="page-footer__top-inner">
-        <div class="page-footer__form-wrap">
-          <h2 class="title-h3 page-footer__subtitle">
-            Связаться со мной
-          </h2>
+  <div class="container">
+    <div class="page-footer__top">
+      <div class="page-footer__nav">
+        <h2 class="page-footer__title">Меню</h2>
 
-          <form class="form form-callback" action="#" method="post">
-            <p class="form__caption">
-              Оставьте заявку и наш менеджер<br> свяжется с Вами в ближайшее время
-            </p>
+        <ul class="page-footer__nav-list">
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Обо мне</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Услуги</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Достижения</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Опыт</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Акции</a>
+          </li>
+          <li class="page-footer__nav-item">
+            <a class="page-footer__nav-link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
 
-            <div class="form__fieldset">
-              <div class="field-text form-callback__field">
-                <label class="sr-only" for="subscribe-name">Имя</label>
-                <input class="field-text__input" type="text" name="subscribe-name" id="subscribe-name" placeholder="Имя" required>
-              </div>
-              <div class="field-text form-callback__field">
-                <label class="sr-only" for="subscribe-email">Email</label>
-                <input class="field-text__input" type="email" name="subscribe-email" id="subscribe-email" placeholder="Email" required>
-              </div>
-              <div class="field-text form-callback__field">
-                <label class="sr-only" for="subscribe-phone">Телефон</label>
-                <input class="field-text__input js-phone-mask" type="text" name="subscribe-phone" id="subscribe-phone" placeholder="+7 (" required>
-              </div>
-            </div>
+      <div class="page-footer__contacts">
+        <h2 class="page-footer__title">Контакты</h2>
 
-            <button class="btn form__submit" type="submit">Оставить заявку</button>
+        <div class="page-footer__contacts-inner">
+          <div class="page-footer__socials">
+            <p class="page-footer__socials-caption">Я в соцсетях</p>
 
-            <p class="form__privacy">
-              Нажимая кнопку, Вы принимаете <a href="#">Политику конфиденциальности</a> и даете согласие на обработку персональных данных
-            </p>
-          </form>
-        </div>
-
-        <div class="page-footer__nav-wrap">
-          <ul class="page-footer__nav-list">
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link @@if (context.activeIndex === 1) {@@activeClass}" href="index.html">О журнале</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link @@if (context.activeIndex === 2) {@@activeClass}" href="issues.html">Выпуски</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link @@if (context.activeIndex === 3) {@@activeClass}" href="catalog.html">Статьи</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link @@if (context.activeIndex === 4) {@@activeClass}" href="guides.html">Авторам</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link @@if (context.activeIndex === 5) {@@activeClass}" href="subscribe.html">Подписка</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link @@if (context.activeIndex === 6) {@@activeClass}" href="editorial-board.html">Редколлегия</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link" href="#">Этика</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link" href="#">Контакты</a>
-            </li>
-            <li class="page-footer__nav-item">
-              <a class="page-footer__nav-link @@if (context.activeIndex === 7) {@@activeClass}" href="news.html">Новости</a>
-            </li>
-          </ul>
-
-          <div class="page-footer__user-menu">
-            <div class="search page-footer__search">
-              <a class="search__link js-modal" href="#" title="Поиск" data-modal="search"></a>
-            </div>
-
-            <div class="language page-footer__language">
-              <a class="language__link" href="#" data-lang-toggle="en">En</a>
-              <a class="language__link --is-active" href="#" data-lang-toggle="ru">Ru</a>
-            </div>
+            <ul class="social-links">
+              <li class="social-links__item">
+                <a class="social-links__link --youtube" href="#"></a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link --whatsapp" href="#"></a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__link --telegram" href="#"></a>
+              </li>
+            </ul>
           </div>
-        </div>
 
-        <div class="page-footer__contacts">
-          <h2 class="title-h3 page-footer__title">
-            Контакты
-          </h2>
-
-          <a class="page-footer__contacts-link" href="tel:+74959561309">+7 (495) 956 13 09</a>
-          <a class="page-footer__contacts-link" href="mailto:info@scf-tp.ru">info@scf-tp.ru</a>
-
-          <p class="page-footer__contacts-address">
-            119002, Москва, Карманицкий пер., д. 9
-            Арбат Бизнес Центр, офис 501A
-          </p>
+          <div class="page-footer__links-wrap">
+            <a class="page-footer__contacts-link" href="mailto:info@akulovdoc.ru">info@akulovdoc.ru</a>
+            <a class="page-footer__contacts-link" href="tel:88000000000">8 (800) 000 00 00</a>
+            <a class="page-footer__feedback">Написать мне</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="page-footer__bottom">
-    <div class="container">
-      <div class="page-footer__bottom-inner">
-        <div class="page-footer__logo-wrapper">
-          <a class="logo" href="#">
-            <img src="img/logo.png" width="221" height="45" alt="Логотип">
-          </a>
-        </div>
-
-        <p class="page-footer__copyright">
-          © 2022 Все права защищены
-        </p>
-
-        <div class="page-footer__develop">
-          <p>
-            Сделано
-          </p>
-
-<!--          <img src="" alt="">-->
-        </div>
+    <div class="page-footer__bottom">
+      <div class="copyright page-footer__copyright">
+        <a class="copyright__item" href="#">Политика конфиденциальности</a>
+        <a class="copyright__item" href="#">Политика обработки персональных данных</a>
+        <p class="copyright__item">© 2022. Все права защищены</p>
       </div>
     </div>
   </div>

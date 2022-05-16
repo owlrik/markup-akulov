@@ -6,8 +6,8 @@
 
 html {
   font-style: normal;
-  font-weight: 400;
-  font-size: size-desktop(18px);
+  font-weight: 500;
+  font-size: 18px;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
@@ -26,15 +26,15 @@ body {
   height: 100%;
   font-style: normal;
   font-weight: 400;
-  font-family: var(--ff-arial);
+  font-family: var(--ff-raleway);
   line-height: 1.4;
-  color: var(--color-text);
+  color: var(--color-text-1);
   overflow-wrap: break-word;
   background-color: var(--color-white);
 }
 
 a {
-  color: var(--color-accent-2);
+  color: var(--color-accent-1);
   text-decoration: none;
 
   &:hover,
