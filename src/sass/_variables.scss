@@ -1,0 +1,34 @@
+:root {
+  // Color system
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray-1: #f3f3f3;
+  --color-gray-2: #959999;
+  --color-gray-3: #737474;
+
+  --color-text: #202222;
+  --color-accent-1: #eaf2d3;
+  --color-accent-2: #143270;
+  --color-accent-2-h: #01194d;
+
+  //--link-color: var(--color-accent-2);
+  //--nav-link-color: var(--color-gray-3);
+  //--nav-link-h-color: var(--color-accent-2-h);
+
+  // Typography
+  --ff-arial: "Arial", sans-serif;
+  --ff-inter: "Inter", "Arial", sans-serif;
+  --ff-montserrat: "Montserrat", "Arial", sans-serif;
+  --ff-open-sans: "Open Sans", "Arial", sans-serif;
+}
+
+// Screen sizes
+$screen--768:  768px;
+$screen--1024: 1024px;
+$screen--1280: 1280px;
+$screen--1440: 1440px;
+$screen--1920: 1920px;
+
+// Resolutions
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

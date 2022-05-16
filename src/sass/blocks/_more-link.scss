@@ -1,0 +1,10 @@
+.more-link {
+  font-size: size(16px);
+  line-height: 1;
+  text-transform: lowercase;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}

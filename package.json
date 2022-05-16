@@ -1,0 +1,61 @@
+{
+  "name": "akulov-ma",
+  "version": "1.0.0",
+  "description": "Сайт-визитка врача Акулова Михаила Альбертовича",
+  "author": "Vadim Tiuriumin",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:owlrik/akulov-ma.git"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp start",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "deploy": "gulp deploy",
+    "webp": "gulp webp",
+    "imagemin": "gulp imagemin",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "editorconfig": "editorconfig-cli",
+    "test": "npm run editorconfig && npm run stylelint"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/js/**/*.js",
+    "src/img/**/*.svg",
+    "src/sass/**/*.{sass,scss}"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^10.4.7",
+    "browser-sync": "^2.27.10",
+    "cross-env": "^7.0.3",
+    "del": "^6.1.1",
+    "gh-pages": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-file-include": "^2.3.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-svgstore": "^9.0.0",
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.52.1",
+    "stylelint": "^14.8.5",
+    "stylelint-config-htmlacademy": "^0.1.12"
+  },
+  "browserList": [
+    "last 3 versions",
+    "IE 11"
+  ]
+}

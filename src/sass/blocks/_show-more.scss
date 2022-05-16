@@ -1,0 +1,11 @@
+.show-more {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  //padding-bottom: 40px;
+}
+
+.show-more__link {
+  font-size: size(14px);
+  text-transform: uppercase;
+}

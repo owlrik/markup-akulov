@@ -1,0 +1,16 @@
+.page-demo {
+  //font-size: calc(14px + (18 - 14) * (100vw - 1280px) / (1920 - 1280));
+  font-size: size-desktop(18px);
+
+  //@media screen and (max-width: 1279px) {
+  //  font-size: 16px;
+  //}
+
+  @media (min-width: 1440px) {
+    font-size: 1rem;
+  }
+}
+
+.page-demo h1 {
+  font-size: size(60px);
+}

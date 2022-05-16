@@ -1,0 +1,61 @@
+<header class="page-header">
+  <div class="container">
+    <div class="page-header__inner">
+      <div class="page-header__logo-wrapper">
+        <a class="logo" href="#">
+          <img src="img/logo.png" width="221" height="45" alt="Логотип">
+        </a>
+      </div>
+
+      <div class="page-header__menu-wrap">
+        <div class="search page-header__search">
+          <a class="search__link js-modal" href="#" title="Поиск" data-modal="search"></a>
+        </div>
+
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 1) {@@activeClass}" href="index.html">О журнале</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 2) {@@activeClass}" href="issues.html">Выпуски</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 3) {@@activeClass}" href="catalog.html">Статьи</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 4) {@@activeClass}" href="guides.html">Авторам</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 5) {@@activeClass}" href="subscribe.html">Подписка</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 6) {@@activeClass}" href="editorial-board.html">Контакты</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 7) {@@activeClass}" href="news.html">Новости</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link @@if (context.activeIndex === 8) {@@activeClass}" href="community.html">СКФ-сообщество</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="page-header__user-menu">
+          <div class="language page-header__language">
+            <a class="language__link" href="#" data-lang-toggle="en">En</a>
+            <a class="language__link --is-active" href="#" data-lang-toggle="ru">Ru</a>
+          </div>
+
+          <div class="page-header__feedback">
+            <a class="btn" href="#">Связаться с нами</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="page-header__toggle" type="button" aria-pressed="false">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
