@@ -1,6 +1,10 @@
 .job-profile__inner {
   padding-top: px-to-rem(60px, 18px);
   padding-bottom: px-to-rem(35px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(30px);
+  }
 }
 
 .job-profile__title {
@@ -22,22 +26,55 @@
 .job-profile__item {
   padding: px-to-rem(30px, 18px) px-to-rem(28px, 18px);
   border: 1px solid #bfc9c9;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding: px-to-rem(20px) px-to-rem(18px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    padding-top: px-to-rem(15px, 14px);
+    padding-bottom: px-to-rem(15px, 14px);
+  }
 }
 
 .job-profile__item.--col-3 {
   grid-column-start: span 3;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    grid-column-start: span 4;
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    grid-column-start: span 12;
+  }
 }
 
 .job-profile__item.--col-4 {
   grid-column-start: span 4;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    grid-column-start: span 12;
+  }
 }
 
 .job-profile__item.--col-5 {
   grid-column-start: span 5;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    grid-column-start: span 4;
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    grid-column-start: span 12;
+  }
 }
 
 .job-profile__item.--col-6 {
   grid-column-start: span 6;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    grid-column-start: span 12;
+  }
 }
 
 .job-profile__item-title {

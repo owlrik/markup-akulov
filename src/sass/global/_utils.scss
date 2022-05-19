@@ -36,6 +36,15 @@
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
+
+  @media screen and (max-width: $screen--1440 - 1) {
+    max-width: 1120px;
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 h1,
@@ -45,6 +54,14 @@ h1,
   font-size: px-to-rem(60px, 18px);
   line-height: 1.1;
   color: var(--color-text-2);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    font-size: px-to-rem(38px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(28px, 14px);
+  }
 }
 
 h2,
@@ -54,6 +71,14 @@ h2,
   font-size: px-to-rem(45px, 18px);
   line-height: 1.1;
   color: var(--color-text-2);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    font-size: px-to-rem(30px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(25px, 14px);
+  }
 }
 
 //h3,

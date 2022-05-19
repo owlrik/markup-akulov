@@ -5,6 +5,16 @@
   padding-bottom: px-to-rem(34px, 18px);
   border-bottom: 1px solid #d6dcdc;
 
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(20px);
+    padding-bottom: px-to-rem(24px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   &:first-child {
     border-top: 1px solid #d6dcdc;
   }
@@ -17,6 +27,14 @@
   font-family: var(--ff-montserrat);
   font-size: px-to-rem(30px, 18px);
   color: var(--color-accent-1);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    font-size: px-to-rem(20px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    margin-bottom: 0.2em;
+  }
 }
 
 .study-item__title {
@@ -26,10 +44,24 @@
   font-family: var(--ff-montserrat);
   font-size: px-to-rem(20px, 18px);
   color: var(--color-text-2);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    flex-basis: 51%;
+    font-size: px-to-rem(16px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    margin-bottom: 0.5em;
+  }
 }
 
 .study-item__descr {
   flex: 0 1 33.7%;
   margin: 0;
   font-size: px-to-rem(16px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    flex-basis: 35%;
+    font-size: px-to-rem(14px);
+  }
 }

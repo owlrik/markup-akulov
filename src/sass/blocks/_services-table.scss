@@ -9,6 +9,10 @@
   justify-content: space-between;
   padding: px-to-rem(15px, 18px) px-to-rem(20px, 18px);
 
+  @media screen and (max-width: $screen--480 - 1) {
+    display: none;
+  }
+
   &::after {
     content: "";
     position: absolute;

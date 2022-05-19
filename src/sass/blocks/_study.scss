@@ -1,6 +1,11 @@
 .study__inner {
   padding-top: px-to-rem(120px, 18px);
   padding-bottom: px-to-rem(110px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(70px);
+    padding-bottom: px-to-rem(60px);
+  }
 }
 
 .study__title {
@@ -9,4 +14,8 @@
 
 .study__list {
   padding-top: px-to-rem(50px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(30px);
+  }
 }

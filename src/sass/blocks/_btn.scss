@@ -22,10 +22,16 @@
   user-select: none;
   touch-action: manipulation;
 
+  @media screen and (max-width: $screen--768 - 1) {
+    padding: 0.8em 1.2em;
+  }
+
   &:hover,
   &:focus {
-    color: var(--color-accent-1);
-    background-color: rgba(0, 0, 0, 0%);
-    opacity: 1;
+    @media screen and (hover: hover) {
+      color: var(--color-accent-1);
+      background-color: rgba(0, 0, 0, 0%);
+      opacity: 1;
+    }
   }
 }

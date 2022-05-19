@@ -5,6 +5,10 @@
   background-size: auto;
   background-repeat: no-repeat;
   -webkit-appearance: none;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    background-position: right 0.4em center;
+  }
 }
 
 .field-text__label {
@@ -26,6 +30,12 @@
   border-bottom: 1px solid var(--color-text-1);
   border-radius: 0;
   outline: 0;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    height: px-to-rem(54px);
+    padding: 1em 1.4em;
+    font-size: px-to-rem(15px);
+  }
 
   &::placeholder {
     color: var(--color-text-1);

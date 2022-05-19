@@ -1,10 +1,18 @@
 .form__caption {
   margin-bottom: 2.22em;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-bottom: 1.2em;
+  }
 }
 
 .form__field,
 .form__fieldset {
   margin-bottom: px-to-rem(15px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-bottom: px-to-rem(10px);
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -22,6 +30,10 @@
 
 .form__submit {
   margin-top: px-to-rem(30px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-top: px-to-rem(20px);
+  }
 }
 
 .form__privacy {

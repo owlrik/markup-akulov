@@ -4,6 +4,10 @@
 
 .appointment__inner {
   padding-top: px-to-rem(120px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(70px);
+  }
 }
 
 .appointment__title {
@@ -18,12 +22,27 @@
   flex: 0 1 43.2%;
   padding-right: 2rem;
   padding-bottom: px-to-rem(90px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    flex-basis: 47%;
+    padding-right: 1rem;
+    padding-bottom: px-to-rem(50px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    flex-basis: 100%;
+    padding-right: 0;
+  }
 }
 
 .appointment__img-wrap {
   position: relative;
   flex: 0 1 50%;
   //margin-left: -1rem;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    display: none;
+  }
 }
 
 .appointment__img-wrap img {

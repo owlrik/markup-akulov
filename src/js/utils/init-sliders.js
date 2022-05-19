@@ -12,6 +12,9 @@
           prevEl: '.testimonials-slider .slider-controls__btn.--prev',
         },
         breakpoints: {
+          768: {
+            slidesPerView: 1.5,
+          },
           1024: {
             slidesPerView: 2,
           },

@@ -13,6 +13,7 @@ const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const csso = require('gulp-csso');
+const gcmq = require('gulp-group-css-media-queries');
 
 const babel = require('gulp-babel');
 
@@ -62,6 +63,7 @@ const buildStyles = () => {
     .pipe(postcss([autoprefixer({
       grid: true,
     })]))
+    .pipe(gcmq())
     .pipe(gulp.dest('build/css'))
     .pipe(server.stream());
 };

@@ -1,19 +1,30 @@
 .about__inner {
   padding-top: px-to-rem(120px, 18px);
   padding-bottom: px-to-rem(60px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(70px);
+    padding-bottom: px-to-rem(30px);
+  }
 }
 
 .about__inner-cols {
   display: flex;
+  flex-direction: column;
 }
 
 .about__title {
-  margin-bottom: px-to-rem(50px, 18px);
+  margin-bottom: 1.11em;
 }
 
 .about__img-wrap {
   flex: 0 1 50%;
   padding-right: 2rem;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    margin-bottom: 1.5rem;
+    padding-right: 0;
+  }
 }
 
 .about__text-wrap {

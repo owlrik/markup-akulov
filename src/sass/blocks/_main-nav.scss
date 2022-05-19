@@ -5,10 +5,25 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .main-nav__item {
   margin-right: px-to-rem(30px, 18px);
+
+  @media screen and (max-width: $screen--1280 - 1) {
+    margin-right: px-to-rem(20px);
+  }
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -27,6 +42,14 @@
   font-size: px-to-rem(16px, 18px);
   line-height: 1.2;
   color: var(--color-text-1);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    text-transform: uppercase;
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(15px, 14px);
+  }
 
   &:hover,
   &:focus {

@@ -1,6 +1,11 @@
 .courses__inner {
   padding-top: px-to-rem(120px, 18px);
   padding-bottom: px-to-rem(120px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(70px);
+    padding-bottom: px-to-rem(70px);
+  }
 }
 
 .courses__title {

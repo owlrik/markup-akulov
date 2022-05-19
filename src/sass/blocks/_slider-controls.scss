@@ -4,8 +4,8 @@
 }
 
 .slider-controls__btn {
-  width: px-to-rem(64px);
-  height: px-to-rem(64px);
+  width: px-to-rem(64px, 18px);
+  height: px-to-rem(64px, 18px);
   background-image: url("data:image/svg+xml,%3Csvg width='12' height='18' viewBox='0 0 12 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.33331 1.88892L9.44442 9.00003L2.33331 16.1111' stroke='%23209494' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E%0A");
   background-size: px-to-rem(12px, 18px) auto;
   background-position: center;

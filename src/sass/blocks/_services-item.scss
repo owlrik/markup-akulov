@@ -5,6 +5,14 @@
   align-items: center;
   padding: px-to-rem(12px, 18px) px-to-rem(20px, 18px);
 
+  @media screen and (max-width: $screen--480 - 1) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-top: px-to-rem(12px, 14px);
+    padding-bottom: px-to-rem(12px, 14px);
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -17,10 +25,14 @@
   }
 
   &:hover {
-    background-color: var(--color-accent-1);
+    @media screen and (hover: hover) {
+      background-color: var(--color-accent-1);
+    }
 
     &::after {
-      background-color: var(--color-accent-1);
+      @media screen and (hover: hover) {
+        background-color: var(--color-accent-1);
+      }
     }
   }
 }
@@ -32,15 +44,23 @@
 
 .services-item:hover .services-item__name,
 .services-item:hover .services-item__price-new {
-  color: var(--color-white);
+  @media screen and (hover: hover) {
+    color: var(--color-white);
+  }
 }
 
 .services-item:hover .services-item__price-old {
-  color: var(--color-gray-1);
+  @media screen and (hover: hover) {
+    color: var(--color-gray-1);
+  }
 }
 
 .services-item__name-wrap {
   flex: 0 1 75%;
+
+  @media screen and (max-width: $screen--480 - 1) {
+    margin-bottom: 1rem;
+  }
 }
 
 .services-item__name {
@@ -52,6 +72,11 @@
   display: flex;
   align-items: center;
   margin-left: 1.5rem;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    justify-content: space-between;
+    margin-left: 0;
+  }
 }
 
 .services-item__btn {
@@ -63,9 +88,18 @@
   opacity: 0;
   visibility: hidden;
 
+  @media screen and (max-width: $screen--1024 - 1) {
+    color: var(--color-white);
+    background-color: var(--color-accent-1);
+    opacity: 1;
+    visibility: visible;
+  }
+
   &:hover,
   &:focus {
-    background-color: var(--color-white);
+    @media screen and (hover: hover) {
+      background-color: var(--color-white);
+    }
   }
 }
 

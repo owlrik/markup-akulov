@@ -1,7 +1,15 @@
 .form-appointment .form__fieldset {
   width: 92%;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    width: 100%;
+  }
 }
 
 .form-appointment .form__submit {
   width: 87.62%;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    width: 100%;
+  }
 }

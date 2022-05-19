@@ -8,4 +8,8 @@
   font-weight: 700;
   font-family: var(--ff-montserrat);
   font-size: px-to-rem(20px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    font-size: px-to-rem(16px);
+  }
 }

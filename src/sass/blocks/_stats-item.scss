@@ -13,6 +13,10 @@
   font-size: px-to-rem(40px, 18px);
   color: var(--color-accent-1);
 
+  @media screen and (max-width: $screen--1024 - 1) {
+    font-size: px-to-rem(30px);
+  }
+
   &::after {
     content: "";
     position: absolute;

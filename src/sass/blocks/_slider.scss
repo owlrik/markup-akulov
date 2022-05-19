@@ -10,4 +10,8 @@
   position: absolute;
   top: px-to-rem(-115px, 18px);
   right: 0;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    top: px-to-rem(-72px, 14px);
+  }
 }

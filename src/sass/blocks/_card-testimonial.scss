@@ -18,6 +18,10 @@
 
 .card-testimonial__inner {
   padding: px-to-rem(30px, 18px);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    padding: px-to-rem(20px, 14px);
+  }
 }
 
 .card-testimonial__header {

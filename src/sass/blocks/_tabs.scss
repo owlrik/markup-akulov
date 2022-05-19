@@ -5,6 +5,14 @@
 .tabs__link-wrap {
   margin-right: px-to-rem(60px, 18px);
 
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-right: px-to-rem(40px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    margin-right: px-to-rem(15px, 14px);
+  }
+
   &:last-child {
     margin-right: 0;
   }
@@ -31,6 +39,14 @@
   padding-bottom: 0.6em;
   font-size: px-to-rem(25px, 18px);
   color: var(--color-text-1);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    font-size: px-to-rem(18px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(14px, 14px);
+  }
 
   &:hover,
   &:focus {

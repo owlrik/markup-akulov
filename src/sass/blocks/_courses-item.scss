@@ -17,6 +17,11 @@
 .courses-item__inner {
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 }
 
 .courses-item__text-wrap {
@@ -34,6 +39,10 @@
   font-family: var(--ff-montserrat);
   font-size: px-to-rem(30px, 18px);
   color: var(--color-accent-1);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    margin-bottom: 1em;
+  }
 }
 
 .courses-item__subtitle {
@@ -62,6 +71,16 @@
 
 .courses-item__img-wrap {
   flex: 0 1 36.38%;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    order: -1;
+  }
+}
+
+.courses-item__img-wrap img {
+  @media screen and (max-width: $screen--768 - 1) {
+    display: none;
+  }
 }
 
 .courses-item__date {
@@ -70,4 +89,9 @@
   font-family: var(--ff-montserrat);
   font-size: px-to-rem(20px, 18px);
   color: var(--color-text-2);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    margin-bottom: 0.5em;
+    font-size: px-to-rem(14px, 14px);
+  }
 }

@@ -1,5 +1,9 @@
 .testimonials__inner {
   padding-top: px-to-rem(128px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    padding-top: px-to-rem(70px);
+  }
 }
 
 .testimonials__title {

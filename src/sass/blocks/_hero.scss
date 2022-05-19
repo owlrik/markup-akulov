@@ -4,6 +4,11 @@
 
 .hero__inner {
   display: flex;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    flex-direction: column;
+    padding-top: px-to-rem(50px);
+  }
 }
 
 .hero__text-wrap {
@@ -13,10 +18,22 @@
   justify-content: center;
   min-height: px-to-rem(672px, 18px);
   padding-right: 2rem;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    min-height: px-to-rem(460px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    min-height: auto;
+  }
 }
 
 .hero__name {
   margin-bottom: px-to-rem(50px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-bottom: px-to-rem(30px);
+  }
 }
 
 .hero__experience {
@@ -25,6 +42,15 @@
   font-family: var(--ff-montserrat);
   font-size: px-to-rem(40px, 18px);
   color: var(--color-accent-1);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-bottom: px-to-rem(15px);
+    font-size: px-to-rem(30px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(25px, 14px);
+  }
 }
 
 .hero__specialty {
@@ -32,16 +58,32 @@
   font-weight: 500;
   font-family: var(--ff-montserrat);
   font-size: px-to-rem(22px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    font-size: px-to-rem(18px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(16px, 14px);
+  }
 }
 
 .hero__btn-wrap {
   margin-top: px-to-rem(50px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-top: px-to-rem(30px);
+  }
 }
 
 .hero__img-wrap {
   position: relative;
   flex: 0 1 50%;
   margin-left: -1rem;
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-left: -2rem;
+  }
 }
 
 .hero__img-wrap img {
@@ -50,4 +92,8 @@
   left: 0;
   width: 147%;
   max-width: none;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    position: static;
+  }
 }
