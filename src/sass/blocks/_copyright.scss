@@ -13,13 +13,15 @@
   font-size: px-to-rem(14px, 18px);
   color: var(--color-text-1);
 
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+a.copyright__item {
   &:hover,
   &:focus {
     color: var(--color-accent-1);
     opacity: 1;
-  }
-
-  &:last-child {
-    margin-right: 0;
   }
 }
