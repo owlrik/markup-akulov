@@ -1,0 +1,24 @@
+.courses__inner {
+  padding-top: px-to-rem(120px, 18px);
+  padding-bottom: px-to-rem(120px, 18px);
+}
+
+.courses__title {
+  margin-bottom: 1.11em;
+}
+
+.courses__caption {
+  margin-bottom: 2.78em;
+}
+
+.courses__list {
+  counter-reset: courses-counter;
+}
+
+.courses__item {
+  margin-bottom: px-to-rem(50px, 18px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

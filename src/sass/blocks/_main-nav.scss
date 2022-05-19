@@ -8,7 +8,7 @@
 }
 
 .main-nav__item {
-  margin-right: size(25px);
+  margin-right: px-to-rem(30px, 18px);
 
   &:last-child {
     margin-right: 0;
@@ -16,20 +16,21 @@
 }
 
 .main-nav__link.--is-active {
-  color: var(--color-accent-2);
+  font-weight: 800;
+  color: var(--color-accent-1);
 }
 
 .main-nav__link {
   display: block;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
-  font-size: size(16px);
+  font-size: px-to-rem(16px, 18px);
   line-height: 1.2;
-  color: var(--color-gray-3);
+  color: var(--color-text-1);
 
   &:hover,
   &:focus {
-    color: var(--color-accent-2-h);
+    color: var(--color-accent-1);
   }
 }
 

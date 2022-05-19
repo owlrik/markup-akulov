@@ -27,17 +27,17 @@
 // 2) ремы в плюс от эталона и в минус, на планшете обычная верстка
 
 // functions.scss
-@function size($size-in-px) {
-  @return math.div($size-in-px, 18px) * 1rem;
-}
-
-@function size-desktop($size-in-px) {
-  @return math.div($size-in-px, 1600px) * 100vw;
-}
-
-@function size-tablet($size-in-px) {
-  @return math.div($size-in-px, 1280px) * 100vw;
-}
+//@function size($size-in-px) {
+//  @return math.div($size-in-px, 18px) * 1rem;
+//}
+//
+//@function size-desktop($size-in-px) {
+//  @return math.div($size-in-px, 1600px) * 100vw;
+//}
+//
+//@function size-tablet($size-in-px) {
+//  @return math.div($size-in-px, 1280px) * 100vw;
+//}
 
 // reboot.scss
 // html {

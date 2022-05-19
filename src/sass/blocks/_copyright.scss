@@ -1,0 +1,25 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding-top: px-to-rem(32px, 18px);
+  padding-bottom: px-to-rem(45px, 18px);
+  border-top: 1px solid #bfc9c9;
+}
+
+.copyright__item {
+  margin-bottom: 0;
+  margin-right: px-to-rem(54px, 18px);
+  padding-right: 0.5rem;
+  font-size: px-to-rem(14px, 18px);
+  color: var(--color-text-1);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent-1);
+    opacity: 1;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

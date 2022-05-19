@@ -1,9 +1,8 @@
 .logo {
   display: inline-block;
-  //transition: opacity 0.3s ease;
+}
 
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-  }
+.logo img {
+  width: px-to-rem(285px, 18px);
+  height: px-to-rem(82px, 18px);
 }

@@ -1,0 +1,53 @@
+.job-profile__inner {
+  padding-top: px-to-rem(60px, 18px);
+  padding-bottom: px-to-rem(35px, 18px);
+}
+
+.job-profile__title {
+  margin-bottom: 1.11em;
+}
+
+.job-profile__caption {
+  max-width: px-to-rem(530px, 18px);
+  margin-bottom: 2.22em;
+}
+
+.job-profile__list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(12, 1fr);
+  gap: px-to-rem(16px, 18px);
+}
+
+.job-profile__item {
+  padding: px-to-rem(30px, 18px) px-to-rem(28px, 18px);
+  border: 1px solid #bfc9c9;
+}
+
+.job-profile__item.--col-3 {
+  grid-column-start: span 3;
+}
+
+.job-profile__item.--col-4 {
+  grid-column-start: span 4;
+}
+
+.job-profile__item.--col-5 {
+  grid-column-start: span 5;
+}
+
+.job-profile__item.--col-6 {
+  grid-column-start: span 6;
+}
+
+.job-profile__item-title {
+  margin-bottom: 0.7em;
+  font-weight: 700;
+  font-family: var(--ff-montserrat);
+  font-size: px-to-rem(20px, 18px);
+}
+
+.job-profile__item-descr {
+  margin: 0;
+  font-size: px-to-rem(16px, 18px);
+}

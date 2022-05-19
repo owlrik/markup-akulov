@@ -1,0 +1,42 @@
+.about__inner {
+  padding-top: px-to-rem(120px, 18px);
+  padding-bottom: px-to-rem(60px, 18px);
+}
+
+.about__inner-cols {
+  display: flex;
+}
+
+.about__title {
+  margin-bottom: px-to-rem(50px, 18px);
+}
+
+.about__img-wrap {
+  flex: 0 1 50%;
+  padding-right: 2rem;
+}
+
+.about__text-wrap {
+  flex: 0 1 50%;
+}
+
+.about__descr {
+  margin-bottom: px-to-rem(26px, 18px);
+}
+
+.about__descr p {
+  margin-bottom: 0.667em;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto auto;
+  row-gap: px-to-rem(18px, 18px);
+  column-gap: px-to-rem(18px, 18px);
+  padding-left: px-to-rem(20px, 18px);
+}
+
+.about__stats-item {
+  max-width: px-to-rem(285px, 18px);
+}

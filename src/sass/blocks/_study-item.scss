@@ -1,0 +1,35 @@
+.study-item {
+  display: flex;
+  justify-content: space-between;
+  padding-top: px-to-rem(30px, 18px);
+  padding-bottom: px-to-rem(34px, 18px);
+  border-bottom: 1px solid #d6dcdc;
+
+  &:first-child {
+    border-top: 1px solid #d6dcdc;
+  }
+}
+
+.study-item__year {
+  flex: 0 1 7.1%;
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--ff-montserrat);
+  font-size: px-to-rem(30px, 18px);
+  color: var(--color-accent-1);
+}
+
+.study-item__title {
+  flex: 0 1 49%;
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--ff-montserrat);
+  font-size: px-to-rem(20px, 18px);
+  color: var(--color-text-2);
+}
+
+.study-item__descr {
+  flex: 0 1 33.7%;
+  margin: 0;
+  font-size: px-to-rem(16px, 18px);
+}

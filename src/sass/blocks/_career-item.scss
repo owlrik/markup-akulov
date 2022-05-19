@@ -1,0 +1,57 @@
+.career-item {
+  position: relative;
+  display: flex;
+  padding-left: px-to-rem(95px, 18px);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    border: 1px solid #bfc9c9;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 33px;
+    bottom: -8px;
+    left: 12px;
+    display: block;
+    width: 1px;
+    background-color: #bfc9c9;
+  }
+
+  &:last-child {
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.career-item__year {
+  margin-right: auto;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-family: var(--ff-montserrat);
+  font-size: px-to-rem(30px, 18px);
+  color: var(--color-accent-1);
+}
+
+.career-item__descr {
+  flex: 0 1 75%;
+  padding-left: 2rem;
+}
+
+.career-item__descr p {
+  margin-bottom: 0.556em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

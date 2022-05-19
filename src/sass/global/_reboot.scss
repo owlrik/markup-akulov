@@ -25,7 +25,7 @@ body {
   width: 100%;
   height: 100%;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-family: var(--ff-raleway);
   line-height: 1.4;
   color: var(--color-text-1);
@@ -39,7 +39,7 @@ a {
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    opacity: 0.75;
   }
   //
   //&:active {

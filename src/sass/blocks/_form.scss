@@ -1,0 +1,30 @@
+.form__caption {
+  margin-bottom: 2.22em;
+}
+
+.form__field,
+.form__fieldset {
+  margin-bottom: px-to-rem(15px, 18px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__fieldset.--datetime {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__fieldset.--datetime .field-text {
+  width: 46.3%;
+}
+
+.form__submit {
+  margin-top: px-to-rem(30px, 18px);
+}
+
+.form__privacy {
+  margin-top: px-to-rem(14px, 18px);
+  font-size: px-to-rem(14px, 18px);
+}

@@ -1,5 +1,35 @@
 @font-face {
   font-style: normal;
+  font-weight: 300;
+  font-family: "Inter";
+  font-display: swap;
+  src:
+    url("../fonts/Inter-Light.woff2") format("woff2"),
+    url("../fonts/Inter-Light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Inter";
+  font-display: swap;
+  src:
+    url("../fonts/Inter-Bold.woff2") format("woff2"),
+    url("../fonts/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "Montserrat";
+  font-display: swap;
+  src:
+    url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 700;
   font-family: "Montserrat";
   font-display: swap;
@@ -26,4 +56,14 @@
   src:
     url("../fonts/Raleway-Semibold.woff2") format("woff2"),
     url("../fonts/Raleway-Semibold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 800;
+  font-family: "Raleway";
+  font-display: swap;
+  src:
+    url("../fonts/Raleway-Extrabold.woff2") format("woff2"),
+    url("../fonts/Raleway-Extrabold.woff") format("woff");
 }

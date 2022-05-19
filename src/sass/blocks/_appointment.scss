@@ -1,0 +1,35 @@
+.appointment {
+  background-color: var(--color-gray-1);
+}
+
+.appointment__inner {
+  padding-top: px-to-rem(120px, 18px);
+}
+
+.appointment__title {
+  margin-bottom: 0.89em;
+}
+
+.appointment__inner-cols {
+  display: flex;
+}
+
+.appointment__form-wrap {
+  flex: 0 1 43.2%;
+  padding-right: 2rem;
+  padding-bottom: px-to-rem(90px, 18px);
+}
+
+.appointment__img-wrap {
+  position: relative;
+  flex: 0 1 50%;
+  //margin-left: -1rem;
+}
+
+.appointment__img-wrap img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 147%;
+  max-width: none;
+}

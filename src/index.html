@@ -15,12 +15,12 @@
         <div class="container">
           <div class="hero__inner">
             <div class="hero__text-wrap">
-              <p class="hero__name">
+              <p class="title-h1 hero__name" id="hero-name">
                 Акулов Михаил Альбертович
               </p>
 
               <p class="hero__experience">
-                30 лет
+                Стаж <span>30 лет</span>
               </p>
 
               <p class="hero__specialty">
@@ -33,7 +33,7 @@
             </div>
 
             <div class="hero__img-wrap">
-              <img src="" alt="">
+              <img src="img/hero-1.png" width="854" height="617" alt="" aria-labelledby="hero-name">
             </div>
           </div>
         </div>
@@ -42,11 +42,11 @@
       <section class="about">
         <div class="container">
           <div class="about__inner">
-            <h2 class="title about__title">Обо мне</h2>
+            <h2 class="title-h2 about__title">Обо мне</h2>
 
             <div class="about__inner-cols">
               <div class="about__img-wrap">
-                <img src="" alt="">
+                <img src="img/about-1.jpg" width="422" height="462" alt="">
               </div>
 
               <div class="about__text-wrap">
@@ -92,41 +92,55 @@
       <section class="job-profile">
         <div class="container">
           <div class="job-profile__inner">
-            <h2 class="title job-profile__title">Профессиональная деятельность</h2>
+            <h2 class="title-h2 job-profile__title">Профессиональная деятельность</h2>
 
             <p class="job-profile__caption">
               Профессиональная деятельность связана с реабилитацией больных нейрохирургического профиля:
             </p>
 
             <div class="job-profile__list">
-              <div class="job-profile__item">
-                <h3 class="job-profile__item-title">Гемифациальный спазм</h3>
+              <div class="job-profile__item --col-3">
+                <h3 class="job-profile__item-title">
+                  <a class="job-profile__item-link" href="#">Гемифациальный спазм</a>
+                </h3>
                 <p class="job-profile__item-descr">
                   Не хирургическое лечение гемифациального спазма – ботулинотерапия.
                 </p>
               </div>
-              <div class="job-profile__item">
-                <h3 class="job-profile__item-title">Экстрапирамидные расстройства</h3>
+
+              <div class="job-profile__item --col-5">
+                <h3 class="job-profile__item-title">
+                  <a class="job-profile__item-link" href="#">Экстрапирамидные расстройства</a>
+                </h3>
                 <p class="job-profile__item-descr">
                   Лечение и реабилитация больных с экстрапирамидными расстройствами
                   (болезнь Паркинсона, цервикальная дистония «кривошея», блефороспазм).
                 </p>
               </div>
-              <div class="job-profile__item">
-                <h3 class="job-profile__item-title">Болевые синдромы</h3>
+
+              <div class="job-profile__item --col-4">
+                <h3 class="job-profile__item-title">
+                  <a class="job-profile__item-link" href="#">Болевые синдромы</a>
+                </h3>
                 <p class="job-profile__item-descr">
                   Лечение болевых синдромов различных этиологий (хронические, боли в спине, миофасциальные болевые синдромы, мигрени)
                 </p>
               </div>
-              <div class="job-profile__item">
-                <h3 class="job-profile__item-title">Поражение лицевого нерва</h3>
+
+              <div class="job-profile__item --col-6">
+                <h3 class="job-profile__item-title">
+                  <a class="job-profile__item-link" href="#">Поражение лицевого нерва</a>
+                </h3>
                 <p class="job-profile__item-descr">
                   Реабилитация и восстановление больных при поражении лицевого нерва (слабость мимической мускулатуры,
                   ассиметрия лица, контрактуры, синкинезии, миоклоничекие подергивания)
                 </p>
               </div>
-              <div class="job-profile__item">
-                <h3 class="job-profile__item-title">Двигательные расстройства</h3>
+
+              <div class="job-profile__item --col-6">
+                <h3 class="job-profile__item-title">
+                  <a class="job-profile__item-link" href="#">Двигательные расстройства</a>
+                </h3>
                 <p class="job-profile__item-descr">
                   Реабилитация больных с двигательными расстройствами после острого нарушение мозгового кровообращения,
                   черепно-мозговых травм, удаления опухолей головного и спинного мозга
@@ -140,7 +154,7 @@
       <section class="career">
         <div class="container">
           <div class="career__inner">
-            <h2 class="title career__title">Работа и образование</h2>
+            <h2 class="title-h2 career__title">Работа и образование</h2>
 
             <div class="career__list">
               <div class="career-item career__item">
@@ -220,51 +234,53 @@
 
       <section class="services">
         <div class="container">
-          <h2 class="title services__title">Услуги и цены</h2>
+          <div class="services__inner">
+            <h2 class="title-h2 services__title">Услуги и цены</h2>
 
-          <div class="services-table">
-            <div class="services-table__inner">
-              <div class="services-table__head">
-                <p class="services-table__title">Услуга</p>
-                <p class="services-table__title">Цена</p>
-              </div>
+            <div class="services-table">
+              <div class="services-table__inner">
+                <div class="services-table__head">
+                  <p class="services-table__title">Услуга</p>
+                  <p class="services-table__title">Цена</p>
+                </div>
 
-              <div class="services-table__body">
-                @@include("src/includes/services-item.html", {
+                <div class="services-table__body">
+                  @@include("src/includes/services-item.html", {
                   "serviceName": "Консультация пациента кандидатом медицинских наук",
                   "servicePriceNew": "0",
                   "servicePriceOld": ""
-                })
-                @@include("src/includes/services-item.html", {
+                  })
+                  @@include("src/includes/services-item.html", {
                   "serviceName": "Ботулинотерапия с использованием препарата КСЕОМИН 1 фл. 50ЕД",
                   "servicePriceNew": "14 200",
                   "servicePriceOld": "20 000"
-                })
-                @@include("src/includes/services-item.html", {
+                  })
+                  @@include("src/includes/services-item.html", {
                   "serviceName": "Ботулинотерапия с использованием препарата КСЕОМИН 1 фл. 50ЕД",
                   "servicePriceNew": "22 500",
                   "servicePriceOld": ""
-                })
-                @@include("src/includes/services-item.html", {
+                  })
+                  @@include("src/includes/services-item.html", {
                   "serviceName": "Ботулинотерапия с использованием препарата КСЕОМИН 1 фл. 300ЕД",
                   "servicePriceNew": "29 800",
                   "servicePriceOld": ""
-                })
-                @@include("src/includes/services-item.html", {
+                  })
+                  @@include("src/includes/services-item.html", {
                   "serviceName": "Лечебная физкультура при заболеваниях позвоночника",
                   "servicePriceNew": "2000",
                   "servicePriceOld": ""
-                })
-                @@include("src/includes/services-item.html", {
+                  })
+                  @@include("src/includes/services-item.html", {
                   "serviceName": "Занятие методиста по ЛФК: массаж + гимнастика мимической мускулатуры, 1 сеанс (45мин.)",
                   "servicePriceNew": "2000",
                   "servicePriceOld": ""
-                })
-                @@include("src/includes/services-item.html", {
+                  })
+                  @@include("src/includes/services-item.html", {
                   "serviceName": "Занятие методиста по ЛФК: массаж + гимнастика мимической мускулатуры, 1 сеанс (60мин.)",
                   "servicePriceNew": "2000",
                   "servicePriceOld": ""
-                })
+                  })
+                </div>
               </div>
             </div>
           </div>
@@ -274,7 +290,7 @@
       <section class="study">
         <div class="container">
           <div class="study__inner">
-            <h2 class="title study__title">Научная деятельность</h2>
+            <h2 class="title-h2 study__title">Научная деятельность</h2>
 
             <div class="tabs study__tabs">
               <div class="tabs__links">
@@ -287,75 +303,77 @@
                 <div class="tabs__link-wrap">
                   <a class="tabs__link" href="#books">Книги</a>
                 </div>
+              </div>
 
-                <div class="tabs__content-wrapper">
-                  <div class="tabs__content-item --is-active" id="papers">
-                    <div class="study__list">
-                      <div class="study-item study__item">
-                        <p class="study-item__year">2021</p>
-                        <p class="study-item__title">
-                          BOTULINUM TOXIN A TREATMENT OF DELAYED FACIAL PALSY IN A RANDOMIZED TRIAL
-                        </p>
-                        <p class="study-item__descr">
-                          В журнале Serbian Journal of Experimental and Clinical Research, издательство University of Kragujevac (Serbia), том 22, № 2, с. 137-143
-                        </p>
-                      </div>
-
-                      <div class="study-item study__item">
-                        <p class="study-item__year">2020</p>
-                        <p class="study-item__title">
-                          Гетерогенность патофизиологических механизмов развития синдрома спастичности при различных заболеваниях ЦНС
-                        </p>
-                        <p class="study-item__descr">
-                          В журнале Фарматека, издательство Издательство Общество с ограниченной ответственностью "Бионика Медиа" (Москва), № 3, с. 26-37
-                        </p>
-                      </div>
-
-                      <div class="study-item study__item">
-                        <p class="study-item__year">2020</p>
-                        <p class="study-item__title">
-                          Нерешенные вопросы реабилитации пациентов со спастическим гемипарезом и чувствительными нарушениями после инсульта. Описание клинического случая
-                        </p>
-                        <p class="study-item__descr">
-                          В журнале Фарматека, издательство Издательство Общество с ограниченной ответственностью "Бионика Медиа" (Москва), № 13, с. 132-141
-                        </p>
-                      </div>
+              <div class="tabs__content-wrapper">
+                <div class="tabs__content-item --is-active" id="papers">
+                  <div class="study__list">
+                    <div class="study-item study__item">
+                      <p class="study-item__year">2021</p>
+                      <p class="study-item__title">
+                        BOTULINUM TOXIN A TREATMENT OF DELAYED FACIAL PALSY IN A RANDOMIZED TRIAL
+                      </p>
+                      <p class="study-item__descr">
+                        В журнале Serbian Journal of Experimental and Clinical Research, издательство University of Kragujevac (Serbia), том 22, №2, с. 137-143
+                      </p>
                     </div>
 
-                    <a class="show-more" href="#">Показать еще</a>
-                  </div>
-
-                  <div class="tabs__content-item" id="proceedings">
-                    <div class="study__list">
-                      <div class="study-item study__item">
-                        <p class="study-item__year">2021</p>
-                        <p class="study-item__title">
-                          BOTULINUM TOXIN A TREATMENT OF DELAYED FACIAL PALSY IN A RANDOMIZED TRIAL
-                        </p>
-                        <p class="study-item__descr">
-                          В журнале Serbian Journal of Experimental and Clinical Research, издательство University of Kragujevac (Serbia), том 22, № 2, с. 137-143
-                        </p>
-                      </div>
+                    <div class="study-item study__item">
+                      <p class="study-item__year">2020</p>
+                      <p class="study-item__title">
+                        Гетерогенность патофизиологических механизмов развития синдрома спастичности при различных заболеваниях ЦНС
+                      </p>
+                      <p class="study-item__descr">
+                        В журнале Фарматека, издательство Издательство Общество с ограниченной ответственностью "Бионика Медиа" (Москва), №3, с. 26-37
+                      </p>
                     </div>
 
-                    <a class="show-more" href="#">Показать еще</a>
-                  </div>
-
-                  <div class="tabs__content-item" id="books">
-                    <div class="study__list">
-                      <div class="study-item study__item">
-                        <p class="study-item__year">2021</p>
-                        <p class="study-item__title">
-                          Гетерогенность патофизиологических механизмов развития синдрома спастичности при различных заболеваниях ЦНС
-                        </p>
-                        <p class="study-item__descr">
-                          В журнале Фарматека, издательство Издательство Общество с ограниченной ответственностью "Бионика Медиа" (Москва), № 3, с. 26-37
-                        </p>
-                      </div>
+                    <div class="study-item study__item">
+                      <p class="study-item__year">2020</p>
+                      <p class="study-item__title">
+                        Нерешенные вопросы реабилитации пациентов со спастическим гемипарезом и чувствительными нарушениями после инсульта. Описание клинического случая
+                      </p>
+                      <p class="study-item__descr">
+                        В журнале Фарматека, издательство Издательство Общество с ограниченной ответственностью "Бионика Медиа" (Москва), №13, с. 132-141
+                      </p>
                     </div>
-
-                    <a class="show-more" href="#">Показать еще</a>
                   </div>
+
+                  <div class="show-more">
+                    <a class="show-more__link" href="#">Показать еще</a>
+                  </div>
+                </div>
+
+                <div class="tabs__content-item" id="proceedings">
+                  <div class="study__list">
+                    <div class="study-item study__item">
+                      <p class="study-item__year">2021</p>
+                      <p class="study-item__title">
+                        BOTULINUM TOXIN A TREATMENT OF DELAYED FACIAL PALSY IN A RANDOMIZED TRIAL
+                      </p>
+                      <p class="study-item__descr">
+                        В журнале Serbian Journal of Experimental and Clinical Research, издательство University of Kragujevac (Serbia), том 22, № 2, с. 137-143
+                      </p>
+                    </div>
+                  </div>
+
+                  <a class="show-more" href="#">Показать еще</a>
+                </div>
+
+                <div class="tabs__content-item" id="books">
+                  <div class="study__list">
+                    <div class="study-item study__item">
+                      <p class="study-item__year">2021</p>
+                      <p class="study-item__title">
+                        Гетерогенность патофизиологических механизмов развития синдрома спастичности при различных заболеваниях ЦНС
+                      </p>
+                      <p class="study-item__descr">
+                        В журнале Фарматека, издательство Издательство Общество с ограниченной ответственностью "Бионика Медиа" (Москва), № 3, с. 26-37
+                      </p>
+                    </div>
+                  </div>
+
+                  <a class="show-more" href="#">Показать еще</a>
                 </div>
               </div>
             </div>
@@ -366,7 +384,7 @@
       <section class="appointment">
         <div class="container">
           <div class="appointment__inner">
-            <h2 class="title appointment__title">Записаться на консультацию</h2>
+            <h2 class="title-h2 appointment__title">Записаться на консультацию</h2>
 
             <div class="appointment__inner-cols">
               <div class="appointment__form-wrap">
@@ -375,29 +393,68 @@
                     Оставьте свои данные и мы свяжемся с вами в ближайшее время, чтобы записать на консультацию
                   </p>
 
-                  <input type="hidden" name="appointment-date" value="">
-                  <input type="hidden" name="appointment-time" value="">
+<!--                  <input type="hidden" name="appointment-date" value="">-->
+<!--                  <input type="hidden" name="appointment-time" value="">-->
 
                   <div class="form__fieldset --contact">
-                    <div class="field-text">
+                    <div class="field-text form__field">
                       <label class="field-text__label sr-only" for="appointment-name">Имя</label>
-                      <input class="field-text__input" type="text" name="appointment-name" id="appointment-name">
+                      <input class="field-text__input" type="text" name="appointment-name" placeholder="Имя" id="appointment-name">
                     </div>
 
-                    <div class="field-text">
+                    <div class="field-text form__field">
                       <label class="field-text__label sr-only" for="appointment-email">Email</label>
-                      <input class="field-text__input" type="email" name="appointment-email" id="appointment-email">
+                      <input class="field-text__input" type="email" name="appointment-email" placeholder="Email" id="appointment-email">
                     </div>
 
-                    <div class="field-text">
+                    <div class="field-text form__field">
                       <label class="field-text__label sr-only" for="appointment-phone">Телефон</label>
-                      <input class="field-text__input" type="text" name="appointment-phone" id="appointment-phone">
+                      <input class="field-text__input" type="text" name="appointment-phone" placeholder="+7 (" id="appointment-phone">
                     </div>
                   </div>
 
                   <div class="form__fieldset --datetime">
-                    <div class="field-select"></div>
-                    <div class="field-select"></div>
+                    <div class="field-text --select">
+                      <label class="field-text__label sr-only" for="appointment-date">Дата</label>
+<!--                      <input class="field-text__input" type="text" name="appointment-date" placeholder="Выбрать дату" id="appointment-date">-->
+                      <select class="field-text__input" name="appointment-date" id="appointment-date">
+                        <option value="Не выбрано" hidden disabled selected>Выбрать дату</option>
+                        <option value="01.01.2022">01.01.2022</option>
+                        <option value="02.01.2022">02.01.2022</option>
+                        <option value="03.01.2022">03.01.2022</option>
+                        <option value="04.01.2022">04.01.2022</option>
+                        <option value="05.01.2022">05.01.2022</option>
+                        <option value="06.01.2022">06.01.2022</option>
+                        <option value="07.01.2022">07.01.2022</option>
+                      </select>
+                    </div>
+
+                    <div class="field-text --select">
+                      <label class="field-text__label sr-only" for="appointment-time">Время</label>
+<!--                      <input class="field-text__input" type="text" name="appointment-time" placeholder="Выбрать время" id="appointment-time">-->
+                      <select class="field-text__input" name="appointment-time" id="appointment-time">
+                        <option value="Не выбрано" hidden disabled selected>Выбрать время</option>
+                        <option value="01.01.2022">09:00</option>
+                        <option value="02.01.2022">09:30</option>
+                        <option value="03.01.2022">10:00</option>
+                        <option value="04.01.2022">10:30</option>
+                        <option value="05.01.2022">11:00</option>
+                        <option value="06.01.2022">11:30</option>
+                        <option value="07.01.2022">12:00</option>
+                        <option value="07.01.2022">12:30</option>
+                        <option value="07.01.2022">13:00</option>
+                        <option value="07.01.2022">13:30</option>
+                        <option value="07.01.2022">14:00</option>
+                        <option value="07.01.2022">14:30</option>
+                        <option value="07.01.2022">15:00</option>
+                        <option value="07.01.2022">15:30</option>
+                        <option value="07.01.2022">16:00</option>
+                        <option value="07.01.2022">16:30</option>
+                        <option value="07.01.2022">17:00</option>
+                        <option value="07.01.2022">17:30</option>
+                        <option value="07.01.2022">18:00</option>
+                      </select>
+                    </div>
                   </div>
 
                   <button class="btn form__submit" type="submit">Оставить заявку</button>
@@ -410,7 +467,7 @@
               </div>
 
               <div class="appointment__img-wrap">
-                <img src="" alt="">
+                <img src="img/hero-1.png" width="854" height="617" alt="">
               </div>
             </div>
           </div>
@@ -420,15 +477,15 @@
       <section class="testimonials">
         <div class="container">
           <div class="testimonials__inner">
-            <h2 class="title testimonials__title">Отзывы</h2>
+            <h2 class="title-h2 testimonials__title">Отзывы</h2>
 
-            <div class="slider testimonials-slider">
+            <div class="slider testimonials-slider --overflow-visible">
               <div class="slider-controls slider__controls">
                 <div class="slider-controls__btn --prev"></div>
                 <div class="slider-controls__btn --next"></div>
               </div>
 
-              <div class="swiper__container slider__container">
+              <div class="swiper slider__container">
                 <div class="swiper-wrapper">
                   @@include("src/includes/testimonials-slide.html", {
                     "testimonialPersonName": "Иванов И. И.",
@@ -460,7 +517,7 @@
       <section class="courses">
         <div class="container">
           <div class="courses__inner">
-            <h2 class="title courses__title">Курсы</h2>
+            <h2 class="title-h2 courses__title">Курсы</h2>
 
             <p class="courses__caption">
               Текст предложений 2-5 о курсах, для кого, зачем и пр. Текст предложений 2-5 о курсах, для кого, зачем и пр.
@@ -471,6 +528,7 @@
               <div class="courses-item courses__item">
                 <div class="courses-item__inner">
                   <div class="courses-item__text-wrap">
+<!--                    <p class="courses-item__num">01</p>-->
                     <h3 class="courses-item__title">Название курса</h3>
                     <p class="courses-item__subtitle">Программа курса</p>
 
@@ -493,7 +551,7 @@
                   <div class="courses-item__img-wrap">
                     <p class="courses-item__date"><span>14 сентября</span> — <span>28 ноября</span></p>
 
-                    <img src="" alt="">
+                    <img src="img/course-1-blank.jpg" width="422" height="457" alt="">
                   </div>
                 </div>
               </div>
@@ -506,8 +564,10 @@
     @@include("src/includes/page-footer.html")
   </div>
 
+  <script src="js/libs/swiper-bundle.min.js"></script>
   <script src="js/libs/jquery-3.5.1.min.js"></script>
   <script src="js/libs/jquery.maskedinput.js"></script>
+  <script src="js/utils/init-sliders.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

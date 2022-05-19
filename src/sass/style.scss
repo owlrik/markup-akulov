@@ -1,6 +1,7 @@
 // Vendor
 //---------------------------------
 @import "vendor/normalize";
+@import "vendor/swiper-bundle.min";
 
 // Global
 //---------------------------------
@@ -16,21 +17,48 @@
 // Blocks
 //---------------------------------
 @import "blocks/btn";
+@import "blocks/tabs";
 @import "blocks/field-text";
 @import "blocks/field-select";
 @import "blocks/link";
 @import "blocks/more-link";
 @import "blocks/logo";
 @import "blocks/show-more";
+@import "blocks/star-rating";
+@import "blocks/social-links";
 //@import "blocks/trigger";
 //@import "blocks/button-image";
 //@import "blocks/checkbox-field";
 //@import "blocks/radio-field";
 
 //@import "blocks/demo";
-@import "blocks/page";
+//@import "blocks/page";
 
 @import "blocks/page-header";
+@import "blocks/page-main";
 @import "blocks/page-footer";
 @import "blocks/main-nav";
+@import "blocks/slider";
+@import "blocks/slider-controls";
+@import "blocks/testimonials-slider";
+@import "blocks/form";
+@import "blocks/form-appointment";
 @import "blocks/modal";
+@import "blocks/stats-item";
+@import "blocks/career-item";
+@import "blocks/services-table";
+@import "blocks/services-item";
+@import "blocks/study-item";
+@import "blocks/card-testimonial";
+@import "blocks/courses-item";
+@import "blocks/copyright";
+
+@import "blocks/hero";
+@import "blocks/about";
+@import "blocks/job-profile";
+@import "blocks/career";
+@import "blocks/services";
+@import "blocks/study";
+@import "blocks/appointment";
+@import "blocks/testimonials";
+@import "blocks/courses";

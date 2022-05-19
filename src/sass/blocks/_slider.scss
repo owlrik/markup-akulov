@@ -1,0 +1,13 @@
+.slider {
+  position: relative;
+}
+
+.slider.--overflow-visible .swiper {
+  overflow: visible;
+}
+
+.slider__controls {
+  position: absolute;
+  top: px-to-rem(-115px, 18px);
+  right: 0;
+}

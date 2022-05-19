@@ -1,0 +1,20 @@
+.career__inner {
+  padding-top: px-to-rem(120px, 18px);
+  padding-bottom: px-to-rem(115px, 18px);
+}
+
+.career__title {
+  margin-bottom: 1.11em;
+}
+
+.career__list {
+  padding-left: px-to-rem(10px, 18px);
+}
+
+.career__item {
+  padding-bottom: px-to-rem(40px, 18px);
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}

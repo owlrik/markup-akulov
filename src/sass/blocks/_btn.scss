@@ -1,26 +1,13 @@
-.btn.--cite {
-  padding-top: 0.625em;
-  padding-bottom: 0.625em;
-  color: var(--color-accent-2);
-  background-color: var(--color-accent-1);
-
-  &:hover,
-  &:focus {
-    color: var(--color-white);
-    background-color: var(--color-accent-2);
-  }
-}
-
 .btn {
   position: relative;
   display: inline-block;
-  max-width: 300px;
-  padding: 1em 2.1875em 1.0625em;
+  //max-width: 300px;
+  padding: 1.125em 2.75em;
   overflow: hidden;
-  font-weight: 400;
-  font-family: var(--ff-arial);
-  font-size: size(16px);
-  line-height: 1.2;
+  font-weight: 700;
+  font-family: var(--ff-montserrat);
+  font-size: px-to-rem(16px, 18px);
+  line-height: 1.4;
   vertical-align: middle;
   text-align: center;
   color: var(--color-white);
@@ -28,16 +15,17 @@
   text-decoration: none;
   white-space: normal;
   overflow-wrap: normal;
-  background-color: var(--color-accent-2);
-  border: 0;
-  border-radius: 0;
+  background-color: var(--color-accent-1);
+  border: 2px solid var(--color-accent-1);
+  border-radius: 100px;
   cursor: pointer;
   user-select: none;
   touch-action: manipulation;
 
   &:hover,
   &:focus {
-    background-color: var(--color-accent-2-h);
+    color: var(--color-accent-1);
+    background-color: rgba(0, 0, 0, 0%);
     opacity: 1;
   }
 }

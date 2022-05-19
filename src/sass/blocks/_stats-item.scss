@@ -1,0 +1,30 @@
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.stats-item__number {
+  position: relative;
+  margin-bottom: 0.3em;
+  padding-bottom: 0.15em;
+  font-weight: 700;
+  font-family: var(--ff-montserrat);
+  font-size: px-to-rem(40px, 18px);
+  color: var(--color-accent-1);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 2ch;
+    height: 1px;
+    background-color: var(--color-accent-1);
+  }
+}
+
+.stats-item__caption {
+  font-size: px-to-rem(16px, 18px);
+}

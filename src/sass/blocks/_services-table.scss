@@ -1,0 +1,30 @@
+.services-table {
+  background-color: var(--color-white);
+  box-shadow: 0 5px 15px rgba(55, 89, 120, 0.1);
+}
+
+.services-table__head {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: px-to-rem(15px, 18px) px-to-rem(20px, 18px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: px-to-rem(20px, 18px);
+    bottom: 0;
+    left: px-to-rem(20px, 18px);
+    display: block;
+    height: 1px;
+    background-color: #bfc9c9;
+  }
+}
+
+.services-table__title {
+  margin: 0;
+  font-weight: 700;
+  font-family: var(--ff-montserrat);
+  font-size: px-to-rem(20px, 18px);
+  color: var(--color-text-2);
+}
