@@ -5,6 +5,9 @@
     // Маска номера
     $('.js-phone-mask').mask('+7 (999) 999-99-99');
 
+    // Fancybox
+    $('.fancybox').fancybox();
+
     // Кнопка мобильного меню
     const menuToggle = $('.page-header__toggle');
     const breakpointMd = window.matchMedia('(max-width: 1023px)');
