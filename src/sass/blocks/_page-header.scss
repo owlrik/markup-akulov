@@ -51,8 +51,9 @@
 }
 
 .page-header__menu-wrap {
-  top: 75px;
-  display: none;
+  @media screen and (max-width: $screen--1024 - 1) {
+    display: none;
+  }
 }
 
 .page-header__contacts {

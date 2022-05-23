@@ -1,6 +1,7 @@
 // Vendor
 //---------------------------------
 @import "vendor/normalize";
+@import "vendor/aos";
 @import "vendor/swiper-bundle.min";
 @import "vendor/jquery.fancybox";
 
@@ -9,7 +10,6 @@
 @import "variables";
 @import "functions";
 @import "mixins";
-//@import "keyframes";
 @import "animation";
 @import "global/fonts";
 @import "global/reboot";
@@ -27,12 +27,7 @@
 @import "blocks/show-more";
 @import "blocks/star-rating";
 @import "blocks/social-links";
-//@import "blocks/trigger";
-//@import "blocks/button-image";
-//@import "blocks/checkbox-field";
-//@import "blocks/radio-field";
 
-//@import "blocks/demo";
 @import "blocks/page";
 
 @import "blocks/page-header";
@@ -45,6 +40,7 @@
 @import "blocks/form";
 @import "blocks/form-appointment";
 @import "blocks/modal";
+@import "blocks/modal-success";
 @import "blocks/stats-item";
 @import "blocks/career-item";
 @import "blocks/services-table";

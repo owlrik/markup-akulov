@@ -1,0 +1,19 @@
+.modal-success .modal__content {
+  max-width: px-to-rem(600px, 18px);
+  padding: px-to-rem(100px, 18px) px-to-rem(60px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    max-width: px-to-rem(380px);
+    padding: px-to-rem(60px) px-to-rem(20px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    padding-top: px-to-rem(40px, 14px);
+    padding-bottom: px-to-rem(40px, 14px);
+  }
+}
+
+.modal-success .modal__title {
+  margin-bottom: 0;
+  text-align: center;
+}

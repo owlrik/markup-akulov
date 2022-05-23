@@ -1,0 +1,71 @@
+<form class="form form-appointment" action="#">
+  <p class="form__caption">
+    Оставьте свои данные и мы свяжемся с вами в ближайшее время, чтобы записать на консультацию
+  </p>
+
+  <div class="form__fieldset --contact">
+    <div class="field-text form__field">
+      <label class="field-text__label sr-only" for=@@idName>Имя</label>
+      <input class="field-text__input" type="text" name="appointment-name" placeholder="Имя" id=@@idName required>
+    </div>
+
+    <div class="field-text form__field">
+      <label class="field-text__label sr-only" for=@@idEmail>Email</label>
+      <input class="field-text__input" type="email" name="appointment-email" placeholder="Email" id=@@idEmail required>
+    </div>
+
+    <div class="field-text form__field">
+      <label class="field-text__label sr-only" for=@@idPhone>Телефон</label>
+      <input class="field-text__input js-phone-mask" type="text" name="appointment-phone" placeholder="+7 (" id=@@idPhone required>
+    </div>
+  </div>
+
+  <div class="form__fieldset --datetime">
+    <div class="field-text --select">
+      <label class="field-text__label sr-only" for=@@idDate>Дата</label>
+      <select class="field-text__input" name="appointment-date" id=@@idDate required>
+        <option value="Не выбрано" hidden disabled selected>Выбрать дату</option>
+        <option value="01.01.2022">01.01.2022</option>
+        <option value="02.01.2022">02.01.2022</option>
+        <option value="03.01.2022">03.01.2022</option>
+        <option value="04.01.2022">04.01.2022</option>
+        <option value="05.01.2022">05.01.2022</option>
+        <option value="06.01.2022">06.01.2022</option>
+        <option value="07.01.2022">07.01.2022</option>
+      </select>
+    </div>
+
+    <div class="field-text --select">
+      <label class="field-text__label sr-only" for=@@idTime>Время</label>
+      <select class="field-text__input" name="appointment-time" id=@@idTime required>
+        <option value="Не выбрано" hidden disabled selected>Выбрать время</option>
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="12:00">12:00</option>
+        <option value="12:30">12:30</option>
+        <option value="13:00">13:00</option>
+        <option value="13:30">13:30</option>
+        <option value="14:00">14:00</option>
+        <option value="14:30">14:30</option>
+        <option value="15:00">15:00</option>
+        <option value="15:30">15:30</option>
+        <option value="16:00">16:00</option>
+        <option value="16:30">16:30</option>
+        <option value="17:00">17:00</option>
+        <option value="17:30">17:30</option>
+        <option value="18:00">18:00</option>
+      </select>
+    </div>
+  </div>
+
+  <button class="btn form__submit" type="submit">Оставить заявку</button>
+
+  <div class="form__privacy">
+    Нажимая кнопку, я даю согласие на обработку персональных данных и соглашаюсь с условиями <a href="#" target="_blank">Политики
+    конфиденциальности</a>
+  </div>
+</form>

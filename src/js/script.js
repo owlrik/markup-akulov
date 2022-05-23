@@ -5,6 +5,11 @@
     // Маска номера
     $('.js-phone-mask').mask('+7 (999) 999-99-99');
 
+    // AOS
+    AOS.init({
+      once: true,
+    });
+
     // Fancybox
     $('.fancybox').fancybox();
 
@@ -51,6 +56,21 @@
     };
 
     toggleMenu();
+
+    // Плавный скролл
+    $('.js-scroll-to').on('click', function () {
+      let target = $(this).attr('href');
+
+      if ($(menuToggle).hasClass('--is-active')) {
+        closeMenu();
+      }
+
+      $('html, body').animate({
+        scrollTop: $(target).offset().top - 50
+      }, 1000);
+
+      return false;
+    });
 
     // Модальные окна
     const openModal = (modal) => {
@@ -105,22 +125,53 @@
       setModalListeners(modal);
     };
 
-    const modalSearch = $('.modal-search');
-    const modalSearchBtns = $('[data-modal="search"]');
+    const modalAppointment = $('.modal-appointment');
+    const modalAppointmentBtns = $('[data-modal="appointment"]');
 
-    const modalCite = $('.modal-cite');
-    const modalCiteBtns = $('[data-modal="cite"]');
+    const modalSuccess = $('.modal-success');
 
     const initModals = () => {
-      if (modalSearch && modalSearchBtns.length) {
-        setupModal(modalSearch, modalSearchBtns, false);
+      if (modalSuccess) {
+        setupModal(modalSuccess, null, false);
       }
 
-      if (modalCite && modalCiteBtns.length) {
-        setupModal(modalCite, modalCiteBtns, false);
+      if (modalAppointment && modalAppointmentBtns.length) {
+        setupModal(modalAppointment, modalAppointmentBtns, false);
       }
     };
 
     initModals();
+
+    const formSubmit = function (form) {
+      let data = $(form).serialize();
+      $.ajax({
+        type: 'POST',
+        url: './forms.php',
+        dataType: 'json',
+        data: data,
+        beforeSend: function(data) {
+          $(form).find('input[type="submit"]').attr('disabled', 'disabled');
+        },
+        success: function(data) {
+          // console.log('success');
+          // alert(data['message']);
+          closeModal($(form)[0].closest('.modal'));
+          $('.modal-success').addClass('--is-active');
+          $('body').css('overflow', 'hidden');
+          $(form).trigger('reset');
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+          console.log(xhr.status);
+          console.log(thrownError);
+        },
+        complete: function(data) {
+          $(form).find('input[type="submit"]').prop('disabled', false);
+        }
+      });
+    };
+    $(".form").on('submit', function(evt) {
+      evt.preventDefault();
+      formSubmit(this);
+    });
   });
 })();

@@ -10,7 +10,10 @@
 
 .about__inner-cols {
   display: flex;
-  flex-direction: column;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    flex-direction: column;
+  }
 }
 
 .about__title {

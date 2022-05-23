@@ -55,7 +55,7 @@ const buildPages = () => {
 };
 
 const buildStyles = () => {
-  return gulp.src('src/sass/style*.scss', {sourcemaps: true})
+  return gulp.src('src/sass/style*.scss', {sourcemaps: isDev})
     .pipe(plumber())
     .pipe(sass({
       includePaths: ['node_modules']
@@ -70,12 +70,12 @@ const buildStyles = () => {
 
 const buildScripts = () => {
   return gulp.src([
-    'src/js/libs/**/*.js',
+    '!src/js/libs/**/*.js',
     'src/js/utils/**/*.js',
     'src/js/script.js'
   ], {
     base: 'src',
-    sourcemaps: true
+    sourcemaps: isDev
   })
   .pipe(plumber())
   .pipe(babel({
@@ -83,22 +83,6 @@ const buildScripts = () => {
     ignore: ['node_modules']
   }))
   .pipe(gulp.dest('build'));
-
-  // return gulp.src([
-  //   'node_modules/picturefill/dist/picturefill.min.js',
-  //   'node_modules/object-fit-images/dist/ofi.min.js',
-  //   'node_modules/svg4everybody/dist/svg4everybody.min.js'
-  // ])
-  // .pipe(gulp.src([
-  //   'src/js/lib/**/*.js',
-  //   'src/js/utils/**/*.js',
-  //   'src/js/script.js'], {sourcemaps: true}))
-  // .pipe(plumber())
-  // .pipe(babel({
-  //   presets: ['@babel/env'],
-  //   ignore: ['node_modules']
-  // }))
-  // .pipe(gulp.dest('build'));
 };
 
 const optimizeSvg = () => {
@@ -144,6 +128,12 @@ const createWebp = () => {
       quality: 90
     }))
     .pipe(gulp.dest('src/img'));
+};
+
+
+const copyVendorScripts = () => {
+  return gulp.src('src/js/libs/**/*.js')
+    .pipe(gulp.dest('build/js/libs'));
 };
 
 const copyImages = () => {
@@ -197,6 +187,7 @@ const build = gulp.series(
     copyMisc,
     copyFonts,
     copyImages,
+    copyVendorScripts,
     buildSvgSprite,
     buildStyles,
     buildScripts,

@@ -5,21 +5,47 @@
   bottom: 0;
   left: 0;
   z-index: 1000;
-  display: none;
+  //display: none;
+  display: block;
   min-width: 320px;
   overflow-y: auto;
   font-size: inherit;
   line-height: inherit;
-  color: var(--color-gray-3);
+  color: var(--color-text-1);
   background-color: rgba(32, 34, 34, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
-.modal .field-text__label {
-  margin-bottom: 1rem;
+.modal .form__caption {
+  margin-bottom: 1em;
+}
+
+.modal .form__fieldset,
+.modal .form__submit {
+  width: 100%;
+}
+
+.modal .field-text__input,
+.modal .field-text.--select .field-text__input {
+  @media screen and (max-width: $screen--768 - 1) {
+    padding-left: 0.5em;
+  }
+}
+
+.modal .field-text.--select .field-text__input {
+  @media screen and (max-width: $screen--768 - 1) {
+    background-size: 10px auto;
+  }
 }
 
 .modal.--is-active {
-  display: block;
+  //display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal__inner {
@@ -29,7 +55,7 @@
   align-items: center;
   width: 100%;
   min-height: 100%;
-  padding: size(30px) size(20px);
+  padding: px-to-rem(30px, 18px) px-to-rem(20px, 18px);
 }
 
 .modal__overlay {
@@ -44,14 +70,27 @@
 .modal__content {
   position: relative;
   width: 100%;
-  max-width: size(964px);
-  padding: size(70px) size(100px);
+  max-width: px-to-rem(600px, 18px);
+  padding: px-to-rem(70px, 18px) px-to-rem(60px, 18px);
   background-color: var(--color-white);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    max-width: px-to-rem(480px);
+    padding: px-to-rem(40px) px-to-rem(30px);
+  }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    padding: px-to-rem(35px) px-to-rem(15px);
+  }
 }
 
 .modal__title {
   margin-bottom: 1.13em;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    margin-bottom: 1em;
+  }
 }
 
 .modal__close {
@@ -69,9 +108,9 @@
   user-select: none;
   touch-action: manipulation;
 
-  &:hover,
-  &:focus {
-    opacity: 0.8;
+  @media screen and (max-width: $screen--1024 - 1) {
+    width: 40px;
+    height: 40px;
   }
 
   &::before,
@@ -82,8 +121,12 @@
     left: 50%;
     width: 30px;
     height: 1px;
-    background-color: var(--color-text);
+    background-color: var(--color-text-2);
     transform-origin: 50% 50%;
+
+    @media screen and (max-width: $screen--1024 - 1) {
+      width: 24px;
+    }
   }
 
   &::before {
@@ -92,5 +135,13 @@
 
   &::after {
     transform: translateX(-50%) rotate3d(0, 0, 1, -45deg);
+  }
+
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      background-color: var(--color-accent-1);
+    }
   }
 }
