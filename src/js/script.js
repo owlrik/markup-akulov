@@ -72,44 +72,83 @@
       return false;
     });
 
+    // Отзывы
+    const renderTestimonialModal = (trigger) => {
+      const card = trigger.closest('.card-testimonial');
+      const personName = $(card).find('.card-testimonial__person-name').text();
+      const serviceTitle = $(card).find('.card-testimonial__service-title').text();
+      const serviceDate = $(card).find('.card-testimonial__date').text();
+      const serviceRating = $(card).find('.card-testimonial__rating').data('rating');
+      const testimonialImage = $(card).find('.card-testimonial__img-wrap img').attr('src');
+      const testimonialText = $(card).find('.card-testimonial__text').text().trim();
+
+      const testimonialModalTemplate = $('#template-testimonial')[0];
+      const testimonialModal = testimonialModalTemplate
+        .content
+        .querySelector('.modal-testimonial')
+        .cloneNode(true);
+
+      testimonialModal.querySelector('.card-testimonial__person-name').textContent = personName;
+      testimonialModal.querySelector('.card-testimonial__service-title').textContent = serviceTitle;
+      testimonialModal.querySelector('.card-testimonial__date').textContent = serviceDate;
+      const ratingElements = testimonialModal.querySelectorAll('.star-rating__rate');
+      for (let i = 0; i < serviceRating; i++) {
+        ratingElements[i].classList.add('--is-active');
+      }
+      testimonialModal.querySelector('.card-testimonial__img-wrap img').src = testimonialImage;
+      testimonialModal.querySelector('.card-testimonial__text').textContent = testimonialText;
+
+      document.body.append(testimonialModal);
+
+      return testimonialModal;
+    };
+
     // Модальные окна
-    const openModal = (modal) => {
+    const openModal = (modal, trigger, callback) => {
+      if (callback) {
+        modal = callback(trigger);
+      }
+
       $(modal).addClass('--is-active');
       $('body').css('overflow', 'hidden');
     };
 
-    const closeModal = (modal) => {
+    const closeModal = (modal, callback) => {
       $(modal).removeClass('--is-active');
       $('body').css('overflow', '');
+
+      if (callback) {
+        callback();
+      }
     };
 
-    const onEscPress = (evt, modal) => {
+    const onEscPress = (evt, modal, callback) => {
       const isEscKey = evt.key === 'Escape' || evt.key === 'Esc';
 
       if (isEscKey && $(modal).hasClass('--is-active')) {
         evt.preventDefault();
-        closeModal(modal);
+        closeModal(modal, callback);
       }
     };
 
-    const setModalListeners = (modal) => {
-      // const overlay = $(modal).find('.modal__overlay')[0];
+    const setModalListeners = (modal, closeCallback) => {
+      const overlay = $(modal).find('.modal__overlay')[0];
       const closeBtn = $(modal).find('.modal__close')[0];
 
       $(closeBtn).on('click', function () {
-        closeModal(modal);
+        closeModal(modal, closeCallback);
       });
 
-      // overlay.addEventListener('click', () => {
-      //   closeModal(modal);
-      // });
+      overlay.addEventListener('click', () => {
+        closeModal(modal, closeCallback);
+      });
 
       $(document).on('keydown', (evt) => {
-        onEscPress(evt, modal);
+        onEscPress(evt, modal, closeCallback);
       });
     };
 
-    const setupModal = (modal, modalBtns, noPrevDefault) => {
+    const setupModal = (modal, modalBtns, noPrevDefault, openCallback, closeCallback) => {
       if (modalBtns) {
         $(modalBtns).each(function () {
           $(this).on('click', function (evt) {
@@ -117,16 +156,20 @@
               evt.preventDefault();
             }
 
-            openModal(modal);
+            const trigger = $(this);
+
+            openModal(modal, trigger, openCallback);
           });
         });
       }
 
-      setModalListeners(modal);
+      setModalListeners(modal, closeCallback);
     };
 
     const modalAppointment = $('.modal-appointment');
     const modalAppointmentBtns = $('[data-modal="appointment"]');
+    const modalTestimonial = $($('#template-testimonial').html());
+    const modalTestimonialBtns = $('[data-modal="testimonial"]');
 
     const modalSuccess = $('.modal-success');
 
@@ -137,6 +180,10 @@
 
       if (modalAppointment && modalAppointmentBtns.length) {
         setupModal(modalAppointment, modalAppointmentBtns, false);
+      }
+
+      if (modalTestimonial && modalTestimonialBtns.length) {
+        setupModal(modalTestimonial, modalTestimonialBtns, false, renderTestimonialModal);
       }
     };
 
@@ -153,8 +200,6 @@
           $(form).find('input[type="submit"]').attr('disabled', 'disabled');
         },
         success: function(data) {
-          // console.log('success');
-          // alert(data['message']);
           closeModal($(form)[0].closest('.modal'));
           $('.modal-success').addClass('--is-active');
           $('body').css('overflow', 'hidden');
@@ -169,6 +214,7 @@
         }
       });
     };
+
     $(".form").on('submit', function(evt) {
       evt.preventDefault();
       formSubmit(this);

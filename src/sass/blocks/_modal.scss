@@ -41,6 +41,12 @@
   }
 }
 
+.modal .card-testimonial__text {
+  display: block;
+  -webkit-line-clamp: none;
+  overflow: auto;
+}
+
 .modal.--is-active {
   //display: block;
   opacity: 1;

@@ -426,24 +426,36 @@
               <div class="swiper slider__container">
                 <div class="swiper-wrapper">
                   @@include("src/includes/testimonials-slide.html", {
-                    "testimonialPersonName": "Иванов И. И.",
-                    "testimonialServiceTitle": "Терапия",
-                    "testimonialDate": "21.12.2021"
+                    "testimonialPersonName": "Иванов И.И.",
+                    "testimonialServiceTitle": "Обезболивание, неврология",
+                    "testimonialDate": "08.02.2022",
+                    "testimonialRating": "5",
+                    "testimonialText": "Спасибо! Сняли острую боль. Нерв восстановили. Очень доволен.",
+                    "isShowMore": false,
                   })
                   @@include("src/includes/testimonials-slide.html", {
-                    "testimonialPersonName": "Иванов И. И.",
-                    "testimonialServiceTitle": "Терапия",
-                    "testimonialDate": "21.12.2021"
+                    "testimonialPersonName": "Аверченко О.Н.",
+                    "testimonialServiceTitle": "Постинсультная реабилитация",
+                    "testimonialDate": "17.01.2022",
+                    "testimonialRating": "4",
+                    "testimonialText": "После инсульта развился парез правой ноги и руки. Думал, что уже не восстановлюсь. Врач назначил комплексную нейрореабилитацию: ЛФК, физиотерапию, коррекцию боли. Сейчас хожу без трости, боль ушла. Отдельное спасибо за терпение и поддержку — без них я бы сдался. Рекомендую всем с двигательными нарушениями.",
+                    "isShowMore": true,
                   })
                   @@include("src/includes/testimonials-slide.html", {
-                    "testimonialPersonName": "Иванов И. И.",
-                    "testimonialServiceTitle": "Терапия",
-                    "testimonialDate": "21.12.2021"
+                    "testimonialPersonName": "Петров А.К.",
+                    "testimonialServiceTitle": "Нейропатическая боль",
+                    "testimonialDate": "21.12.2021",
+                    "testimonialRating": "5",
+                    "testimonialText": "Выражаю глубочайшую благодарность моему лечащему врачу. Я поступил с хроническим нейропатическим болевым синдромом после операции на позвоночнике — боль была настолько сильной, что я не спал ночами. Плюс присоединился парез стопы и онемение. Доктор провёл детальную диагностику, назначил индивидуальный курс: медикаментозную терапию, кинезиотерапию, стимуляцию нервных стволов. Через три недели боль ушла на 80%, через два месяца я начал нормально ходить. Сейчас веду активную жизнь. Спасибо за возвращённое здоровье и веру в себя!",
+                    "isShowMore": true,
                   })
                   @@include("src/includes/testimonials-slide.html", {
-                    "testimonialPersonName": "Иванов И. И.",
-                    "testimonialServiceTitle": "Терапия",
-                    "testimonialDate": "21.12.2021"
+                    "testimonialPersonName": "Бендер-Задунайский О.Б.",
+                    "testimonialServiceTitle": "Лицевой нерв",
+                    "testimonialDate": "15.12.2021",
+                    "testimonialRating": "5",
+                    "testimonialText": "Долго мучился с лицевым нервом — не мог улыбнуться. Врач подобрал программу реабилитации. Через месяц мимика почти вернулась. Огромное спасибо за чуткость и профессионализм!",
+                    "isShowMore": true,
                   })
                 </div>
               </div>
@@ -533,6 +545,44 @@
       </div>
     </div>
   </div>
+
+  <template id="template-testimonial">
+    <div class="modal modal-testimonial">
+      <div class="modal__inner">
+        <div class="modal__overlay"></div>
+
+        <div class="card-testimonial modal__content">
+          <div class="card-testimonial_inner">
+            <header class="card-testimonial__header">
+              <h3 class="card-testimonial__person-name"></h3>
+              <p class="card-testimonial__service-title">Услуга: <a href="#"></a></p>
+              <p class="card-testimonial__date"></p>
+
+              <div class="star-rating card-testimonial__rating">
+                <div class="star-rating__rate"></div>
+                <div class="star-rating__rate"></div>
+                <div class="star-rating__rate"></div>
+                <div class="star-rating__rate"></div>
+                <div class="star-rating__rate"></div>
+              </div>
+            </header>
+
+            <div class="card-testimonial__body">
+              <a class="card-testimonial__img-wrap fancybox" href="">
+                <img src="" width="93" height="135" alt="Отзыв пациента">
+              </a>
+
+              <div class="card-testimonial__text-wrap">
+                <p class="card-testimonial__text"></p>
+              </div>
+            </div>
+          </div>
+
+          <button class="modal__close" type="button" title="Закрыть"></button>
+        </div>
+      </div>
+    </div>
+  </template>
 
   <script src="js/libs/aos.js"></script>
   <script src="js/libs/swiper-bundle.min.js"></script>

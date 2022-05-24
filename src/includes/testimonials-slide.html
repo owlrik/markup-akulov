@@ -2,29 +2,36 @@
   <article class="card-testimonial">
     <div class="card-testimonial__inner">
       <header class="card-testimonial__header">
-        <h3 class="card-testimonial__person-name">Иванов И. И.</h3>
-        <p class="card-testimonial__service-title">Услуга: <a href="#">Терапия</a></p>
-        <p class="card-testimonial__date">21.12.2021</p>
+        <h3 class="card-testimonial__person-name">@@testimonialPersonName</h3>
+        <p class="card-testimonial__service-title">Услуга: <a href="#">@@testimonialServiceTitle</a></p>
+        <p class="card-testimonial__date">@@testimonialDate</p>
 
-        <div class="star-rating card-testimonial__rating">
-          <div class="star-rating__rate --is-active"></div>
-          <div class="star-rating__rate --is-active"></div>
-          <div class="star-rating__rate --is-active"></div>
-          <div class="star-rating__rate --is-active"></div>
-          <div class="star-rating__rate"></div>
+        <div class="star-rating card-testimonial__rating" data-rating=@@testimonialRating>
+          @@for (var i = 1; i <= 5; i++) {
+            `+(i <= context.testimonialRating ?
+            '<div class="star-rating__rate --is-active"></div>' :
+            '<div class="star-rating__rate"></div>')+`
+          }
         </div>
       </header>
 
       <div class="card-testimonial__body">
         <a class="card-testimonial__img-wrap fancybox" href="img/testimonial-1.jpg">
-          <img src="img/testimonial-1.jpg" width="93" height="135" alt="Отзыв">
+          <img src="img/testimonial-1.jpg" width="93" height="135" alt="Отзыв пациента">
         </a>
 
         <div class="card-testimonial__text-wrap">
-          <p class="card-testimonial__text">
-            По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает
-            у некторых людей недоумение... <a class="card-testimonial__more" href="#">еще</a>
-          </p>
+          <div class="card-testimonial__text">
+            <p>
+              @@testimonialText
+            </p>
+          </div>
+
+          @@if (context.isShowMore) {
+            <p>
+              <a class="card-testimonial__more" href="#" data-modal="testimonial">еще</a>
+            </p>
+          }
         </div>
       </div>
     </div>
