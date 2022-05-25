@@ -92,7 +92,7 @@
         </div>
       </section>
 
-      <section class="job-profile" id="job-profile">
+      <section class="job-profile" id="job-profile" data-anchor-offset="100">
         <div class="container">
           <div class="job-profile__inner">
             <h2 class="title-h2 job-profile__title">Профессиональная деятельность</h2>
@@ -455,7 +455,7 @@
                     "testimonialDate": "15.12.2021",
                     "testimonialRating": "5",
                     "testimonialText": "Долго мучился с лицевым нервом — не мог улыбнуться. Врач подобрал программу реабилитации. Через месяц мимика почти вернулась. Огромное спасибо за чуткость и профессионализм!",
-                    "isShowMore": false,
+                    "isShowMore": true,
                   })
                 </div>
               </div>
@@ -554,7 +554,11 @@
       <div class="modal__overlay" data-close></div>
 
       <div class="modal__content">
-        <h2 class="title-h2 modal__title">Спасибо за заявку!</h2>
+        <p class="title-h2 modal__title">Спасибо за заявку!</p>
+
+        <div class="modal__btn-wrap">
+          <button class="btn modal__btn" type="button" data-close>Закрыть</button>
+        </div>
 
         <button class="modal__close" type="button" title="Закрыть" data-close></button>
       </div>

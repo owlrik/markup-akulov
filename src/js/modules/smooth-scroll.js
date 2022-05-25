@@ -11,13 +11,15 @@ window.App = window.App || {};
 
       links.forEach((link) => {
         link.addEventListener('click', (evt) => {
-          let target = evt.currentTarget.href.split('#').slice(-1).pop();
+          const targetName = evt.currentTarget.href.split('#').slice(-1).pop();
+          const targetElement = document.querySelector(`#${targetName}`);
+          const offset = (targetElement.dataset.anchorOffset) ? +targetElement.dataset.anchorOffset : 50;
           if (menuToggle.classList.contains('--is-active')) {
             App.header.closeMenu();
           }
 
           $('html, body').animate({
-            scrollTop: $(`#${target}`).offset().top - 50,
+            scrollTop: $(targetElement).offset().top - offset,
           }, 1000);
         });
       });
