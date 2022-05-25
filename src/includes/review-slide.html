@@ -1,0 +1,40 @@
+<div class="swiper-slide">
+  <article class="card-review">
+    <div class="card-review__inner">
+      <header class="card-review__header">
+        <h3 class="card-review__person-name">@@reviewPersonName</h3>
+        <p class="card-review__service-title">Услуга: <a href="#">@@reviewServiceTitle</a></p>
+        <p class="card-review__date">@@reviewDate</p>
+
+        <div class="star-rating card-review__rating" data-rating=@@reviewRating>
+          @@for (var i = 1; i <= 5; i++) {
+            `+(i <= context.reviewRating ?
+            '<div class="star-rating__rate --is-active"></div>' :
+            '<div class="star-rating__rate"></div>')+`
+          }
+        </div>
+      </header>
+
+      <div class="card-review__body">
+        <a class="card-review__img-wrap fancybox" href="img/review-1.jpg">
+          <img src="img/review-1.jpg" width="93" height="135" alt="Отзыв пациента">
+        </a>
+
+        <div class="card-review__text-wrap">
+          <div class="card-review__text">
+            <p>
+              @@reviewText
+            </p>
+          </div>
+
+          @@if (context.isShowMore) {
+            <p>
+              <a class="card-review__more" href="#" data-modal="review">еще</a>
+            </p>
+          }
+        </div>
+      </div>
+    </div>
+
+  </article>
+</div>

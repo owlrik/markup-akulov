@@ -51,15 +51,15 @@ window.App = window.App || {};
         }
       };
 
-      const initTestimonialSlider = () => {
-        const slider = document.querySelector('.testimonials-slider .swiper');
+      const initReviewSlider = () => {
+        const slider = document.querySelector('.reviews-slider .swiper');
         const options = {
           slidesPerView: 1,
           spaceBetween: 20,
 
           navigation: {
-            nextEl: '.testimonials-slider .slider-controls__btn.--next',
-            prevEl: '.testimonials-slider .slider-controls__btn.--prev',
+            nextEl: '.reviews-slider .slider-controls__btn.--next',
+            prevEl: '.reviews-slider .slider-controls__btn.--prev',
           },
           breakpoints: {
             768: {
@@ -77,7 +77,7 @@ window.App = window.App || {};
 
         initSlider(slider, options);
       };
-      initTestimonialSlider();
+      initReviewSlider();
     }
   };
 })(window.App);

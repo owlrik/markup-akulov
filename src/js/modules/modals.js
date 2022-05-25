@@ -64,62 +64,62 @@ window.App = window.App || {};
       }
       setupSuccessModal();
 
-      const modalTestimonialTemplate = document.querySelector('#template-testimonial')
+      const modalReviewTemplate = document.querySelector('#template-review')
         .content
-        .querySelector('.modal-testimonial');
-      let modalTestimonial = null;
-      const testimonialOpeners = document.querySelectorAll('[data-modal="testimonial"]');
-      let testimonialClosers = null;
+        .querySelector('.modal-review');
+      let modalReview = null;
+      const reviewOpeners = document.querySelectorAll('[data-modal="review"]');
+      let reviewClosers = null;
 
-      const renderTestimonial = (testimonial) => {
-        if (!testimonial) {
+      const renderReview = (review) => {
+        if (!review) {
           return;
         }
 
-        const personName = testimonial.querySelector('.card-testimonial__person-name').textContent;
-        const serviceTitle = testimonial.querySelector('.card-testimonial__service-title').textContent;
-        const serviceDate = testimonial.querySelector('.card-testimonial__date').textContent;
-        const serviceRating = testimonial.querySelector('.card-testimonial__rating').dataset.rating;
-        const testimonialImage = testimonial.querySelector('.card-testimonial__img-wrap img').getAttribute('src');
-        const testimonialText = testimonial.querySelector('.card-testimonial__text').textContent.trim();
+        const personName = review.querySelector('.card-review__person-name').textContent;
+        const serviceTitle = review.querySelector('.card-review__service-title').textContent;
+        const serviceDate = review.querySelector('.card-review__date').textContent;
+        const serviceRating = review.querySelector('.card-review__rating').dataset.rating;
+        const reviewImage = review.querySelector('.card-review__img-wrap img').getAttribute('src');
+        const reviewText = review.querySelector('.card-review__text').textContent.trim();
 
-        modalTestimonial = modalTestimonialTemplate.cloneNode(true);
+        modalReview = modalReviewTemplate.cloneNode(true);
 
-        modalTestimonial.querySelector('.card-testimonial__person-name').textContent = personName;
-        modalTestimonial.querySelector('.card-testimonial__service-title').textContent = serviceTitle;
-        modalTestimonial.querySelector('.card-testimonial__date').textContent = serviceDate;
-        const ratingElements = modalTestimonial.querySelectorAll('.star-rating__rate');
+        modalReview.querySelector('.card-review__person-name').textContent = personName;
+        modalReview.querySelector('.card-review__service-title').textContent = serviceTitle;
+        modalReview.querySelector('.card-review__date').textContent = serviceDate;
+        const ratingElements = modalReview.querySelectorAll('.star-rating__rate');
         for (let i = 0; i < serviceRating; i++) {
           ratingElements[i].classList.add('--is-active');
         }
-        modalTestimonial.querySelector('.card-testimonial__img-wrap').href = testimonialImage;
-        modalTestimonial.querySelector('.card-testimonial__img-wrap img').src = testimonialImage;
-        modalTestimonial.querySelector('.card-testimonial__text').textContent = testimonialText;
+        modalReview.querySelector('.card-review__img-wrap').href = reviewImage;
+        modalReview.querySelector('.card-review__img-wrap img').src = reviewImage;
+        modalReview.querySelector('.card-review__text').textContent = reviewText;
 
-        body.append(modalTestimonial);
+        body.append(modalReview);
       };
 
-      const addTestimonialListeners = () => {
-        App.fancybox.setup('.modal-testimonial .fancybox');
+      const addReviewListeners = () => {
+        App.fancybox.setup('.modal-review .fancybox');
 
-        testimonialClosers = modalTestimonial.querySelectorAll('[data-close]');
-        testimonialClosers.forEach((closer) => {
+        reviewClosers = modalReview.querySelectorAll('[data-close]');
+        reviewClosers.forEach((closer) => {
           closer.addEventListener('click', (evt) => {
             evt.preventDefault();
-            closeModal(modalTestimonial);
+            closeModal(modalReview);
           });
         });
       };
 
-      testimonialOpeners.forEach((opener) => {
+      reviewOpeners.forEach((opener) => {
         opener.addEventListener('click', (evt) => {
           evt.preventDefault();
 
-          const currentTestimonial = evt.currentTarget.closest('.card-testimonial');
-          renderTestimonial(currentTestimonial);
-          addTestimonialListeners();
+          const currentReview = evt.currentTarget.closest('.card-review');
+          renderReview(currentReview);
+          addReviewListeners();
 
-          openModal(modalTestimonial);
+          openModal(modalReview);
         });
       });
     },
