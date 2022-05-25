@@ -455,7 +455,7 @@
                     "testimonialDate": "15.12.2021",
                     "testimonialRating": "5",
                     "testimonialText": "Долго мучился с лицевым нервом — не мог улыбнуться. Врач подобрал программу реабилитации. Через месяц мимика почти вернулась. Огромное спасибо за чуткость и профессионализм!",
-                    "isShowMore": true,
+                    "isShowMore": false,
                   })
                 </div>
               </div>
@@ -470,31 +470,46 @@
             <h2 class="title-h2 courses__title">Курсы</h2>
 
             <p class="courses__caption">
-              Текст предложений 2-5 о курсах, для кого, зачем и пр. Текст предложений 2-5 о курсах, для кого, зачем и пр.
-              Текст предложений 2-5 о курсах, для кого, зачем и пр.
+              Курс предназначен для пациентов после нейрохирургических операций, черепно-мозговых травм и&nbsp;инсультов,
+              а&nbsp;также для тех, кто страдает хроническими болевыми синдромами, парезами или нарушением мимики
+              из-за поражения лицевого нерва. Цель&nbsp;&mdash; обучить безопасным методам самопомощи, ускорить
+              восстановление утраченных функций и&nbsp;снизить риск рецидивов.
             </p>
 
             <div class="courses__list">
               <div class="courses-item courses__item">
                 <div class="courses-item__inner">
                   <div class="courses-item__text-wrap">
-<!--                    <p class="courses-item__num">01</p>-->
-                    <h3 class="courses-item__title">Название курса</h3>
+                    <h3 class="courses-item__title">Нейрореабилитация дома: боль, нерв, движение</h3>
                     <p class="courses-item__subtitle">Программа курса</p>
 
                     <div class="courses-item__descr">
-                      <p>Тема 1. Название первого модуля или раздела курса, может быть любой длины, сколько нужно</p>
+                      <p>Тема 1. Как работать с болевым синдромом без лекарств</p>
 
                       <ul>
-                        <li>Детализация</li>
-                        <li>Детализация</li>
-                        <li>Детализация</li>
-                        <li>Детализация</li>
+                        <li>Позиционирование тела для снижения боли</li>
+                        <li>Дыхательные техники при нейропатической боли</li>
+                        <li>Точечный самомассаж и отвлекающие методики</li>
+                        <li>Когда нужно срочно обратиться к врачу</li>
                       </ul>
 
-                      <p>Тема 2. Название первого модуля или раздела курса, может быть любой длины, сколько нужно</p>
-                      <p>Тема 3. Название первого модуля или раздела курса, может быть любой длины, сколько нужно</p>
-                      <p>Тема 4. Название первого модуля или раздела курса, может быть любой длины, сколько нужно</p>
+                      <p>Тема 2. Восстановление лицевого нерва: мимика и массаж</p>
+
+                      <ul>
+                        <li>Основные мимические упражнения перед зеркалом</li>
+                        <li>Приёмы самомассажа лица (без перерастяжения мышц)</li>
+                        <li>Как избежать патологических синкинезий</li>
+                        <li>Ежедневный протокол на 10 минут</li>
+                      </ul>
+
+                      <p>Тема 3. Двигательные расстройства: безопасные упражнения при парезах</p>
+
+                      <ul>
+                        <li>Противопоказания при спастичности</li>
+                        <li>Упражнения для восстановления ходьбы (с опорой и без)</li>
+                        <li>Простая нейродинамика для рук и ног</li>
+                        <li>Техники расслабления спазмированных мышц</li>
+                      </ul>
                     </div>
                   </div>
 
@@ -516,7 +531,7 @@
 
   <div class="modal modal-appointment">
     <div class="modal__inner">
-      <div class="modal__overlay"></div>
+      <div class="modal__overlay" data-close></div>
 
       <div class="modal__content">
         <h2 class="title-h2 modal__title">Записаться на консультацию</h2>
@@ -529,19 +544,19 @@
           "idDate": "m-appointment-date",
         })
 
-        <button class="modal__close" type="button" title="Закрыть"></button>
+        <button class="modal__close" type="button" title="Закрыть" data-close></button>
       </div>
     </div>
   </div>
 
   <div class="modal modal-success">
     <div class="modal__inner">
-      <div class="modal__overlay"></div>
+      <div class="modal__overlay" data-close></div>
 
       <div class="modal__content">
         <h2 class="title-h2 modal__title">Спасибо за заявку!</h2>
 
-        <button class="modal__close" type="button" title="Закрыть"></button>
+        <button class="modal__close" type="button" title="Закрыть" data-close></button>
       </div>
     </div>
   </div>
@@ -549,7 +564,7 @@
   <template id="template-testimonial">
     <div class="modal modal-testimonial">
       <div class="modal__inner">
-        <div class="modal__overlay"></div>
+        <div class="modal__overlay" data-close></div>
 
         <div class="card-testimonial modal__content">
           <div class="card-testimonial_inner">
@@ -578,7 +593,7 @@
             </div>
           </div>
 
-          <button class="modal__close" type="button" title="Закрыть"></button>
+          <button class="modal__close" type="button" title="Закрыть" data-close></button>
         </div>
       </div>
     </div>
@@ -590,8 +605,15 @@
   <script src="js/libs/jquery.maskedinput.js"></script>
   <script src="js/libs/jquery.fancybox.js"></script>
 
-  <script src="js/utils/init-sliders.js"></script>
-  <script src="js/utils/init-tabs.js"></script>
+  <script src="js/modules/header.js"></script>
+  <script src="js/modules/smooth-scroll.js"></script>
+  <script src="js/modules/init-aos.js"></script>
+  <script src="js/modules/init-masks.js"></script>
+  <script src="js/modules/init-fancybox.js"></script>
+  <script src="js/modules/form.js"></script>
+  <script src="js/modules/init-sliders.js"></script>
+  <script src="js/modules/modals.js"></script>
+  <script src="js/modules/tabs.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

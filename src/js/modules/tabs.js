@@ -1,10 +1,9 @@
-(function () {
-  'use strict';
+window.App = window.App || {};
 
-  $(document).ready(function () {
-    const tabComponents = document.querySelectorAll('.tabs');
-
-    const initTabs = () => {
+(function (App) {
+  App.tabs = {
+    init() {
+      const tabComponents = document.querySelectorAll('.tabs');
       if (!tabComponents) {
         return;
       }
@@ -37,8 +36,6 @@
           })
         })
       });
-    };
-
-    initTabs();
-  });
-})();
+    }
+  }
+})(window.App);

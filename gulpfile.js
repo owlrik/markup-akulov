@@ -72,6 +72,7 @@ const buildScripts = () => {
   return gulp.src([
     '!src/js/libs/**/*.js',
     'src/js/utils/**/*.js',
+    'src/js/modules/**/*.js',
     'src/js/script.js'
   ], {
     base: 'src',
