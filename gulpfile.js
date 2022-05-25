@@ -78,11 +78,11 @@ const buildScripts = () => {
     base: 'src',
     sourcemaps: isDev
   })
-  .pipe(plumber())
-  .pipe(babel({
-    presets: ['@babel/env'],
-    ignore: ['node_modules']
-  }))
+  // .pipe(plumber())
+  // .pipe(babel({
+  //   presets: ['@babel/env'],
+  //   ignore: ['node_modules']
+  // }))
   .pipe(gulp.dest('build'));
 };
 
