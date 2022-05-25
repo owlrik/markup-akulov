@@ -77,7 +77,7 @@ window.App = window.App || {};
         }
 
         const personName = review.querySelector('.card-review__person-name').textContent;
-        const serviceTitle = review.querySelector('.card-review__service-title').textContent;
+        const serviceTitle = review.querySelector('.card-review__service-title a').textContent;
         const serviceDate = review.querySelector('.card-review__date').textContent;
         const serviceRating = review.querySelector('.card-review__rating').dataset.rating;
         const reviewImage = review.querySelector('.card-review__img-wrap img').getAttribute('src');
@@ -86,7 +86,7 @@ window.App = window.App || {};
         modalReview = modalReviewTemplate.cloneNode(true);
 
         modalReview.querySelector('.card-review__person-name').textContent = personName;
-        modalReview.querySelector('.card-review__service-title').textContent = serviceTitle;
+        modalReview.querySelector('.card-review__service-title a').textContent = serviceTitle;
         modalReview.querySelector('.card-review__date').textContent = serviceDate;
         const ratingElements = modalReview.querySelectorAll('.star-rating__rate');
         for (let i = 0; i < serviceRating; i++) {
@@ -107,6 +107,7 @@ window.App = window.App || {};
           closer.addEventListener('click', (evt) => {
             evt.preventDefault();
             closeModal(modalReview);
+            modalReview.remove();
           });
         });
       };

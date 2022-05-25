@@ -1,0 +1,5 @@
+.modal-review .modal__content {
+  @media screen and (min-width: $screen--768) {
+    padding: px-to-rem(50px, 18px);
+  }
+}
