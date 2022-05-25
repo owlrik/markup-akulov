@@ -54,6 +54,10 @@
 
 .page-footer__nav-link {
   font-size: px-to-rem(16px, 18px);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: 1rem;
+  }
 }
 
 .page-footer__contacts {
@@ -68,6 +72,10 @@
 .page-footer__socials-caption {
   margin-bottom: 1.25em;
   font-size: px-to-rem(16px, 18px);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: 1rem;
+  }
 }
 
 .page-footer__links-wrap {

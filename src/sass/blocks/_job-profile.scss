@@ -25,7 +25,7 @@
 
 .job-profile__item {
   padding: px-to-rem(30px, 18px) px-to-rem(28px, 18px);
-  border: 1px solid #bfc9c9;
+  border: 1px solid var(--color-gray-2);
 
   @media screen and (max-width: $screen--1024 - 1) {
     padding: px-to-rem(20px) px-to-rem(18px);
@@ -87,4 +87,8 @@
 .job-profile__item-descr {
   margin: 0;
   font-size: px-to-rem(16px, 18px);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(14px, 14px);
+  }
 }

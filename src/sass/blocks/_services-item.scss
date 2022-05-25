@@ -95,6 +95,10 @@
     visibility: visible;
   }
 
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(12px, 14px);
+  }
+
   &:hover,
   &:focus {
     @media screen and (hover: hover) {

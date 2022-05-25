@@ -1,6 +1,6 @@
 .modal-success .modal__content {
   max-width: px-to-rem(600px, 18px);
-  padding: px-to-rem(100px, 18px) px-to-rem(60px, 18px);
+  padding: px-to-rem(80px, 18px) px-to-rem(60px, 18px);
 
   @media screen and (max-width: $screen--1024 - 1) {
     max-width: px-to-rem(380px);

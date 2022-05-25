@@ -1,5 +1,5 @@
 .card-testimonial {
-  border: 1px solid #bfc9c9;
+  border: 1px solid var(--color-gray-2);
 
   &:hover {
     border-color: var(--color-gray-1);
@@ -12,7 +12,7 @@
 
   &:hover,
   &:focus {
-    color: #354faa;
+    opacity: 0.75;
   }
 }
 
@@ -32,11 +32,19 @@
   row-gap: px-to-rem(10px, 18px);
   column-gap: 2rem;
   margin-bottom: px-to-rem(20px, 18px);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    column-gap: 1rem;
+  }
 }
 
 .card-testimonial__person-name {
   font-size: px-to-rem(18px, 18px);
   color: var(--color-accent-1);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(16px, 14px);
+  }
 }
 
 .card-testimonial__service-title {
@@ -44,6 +52,10 @@
   margin: 0;
   font-size: px-to-rem(16px, 18px);
   color: var(--color-text-2);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(14px, 14px);
+  }
 }
 
 .card-testimonial__date {
@@ -53,6 +65,10 @@
   color: var(--color-text-2);
   text-align: right;
   opacity: 0.6;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(12px, 14px);
+  }
 }
 
 .card-testimonial__rating {
@@ -82,6 +98,10 @@
   margin: 0;
   font-size: px-to-rem(14px, 18px);
   color: #383c3e;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(12px, 14px);
+  }
 }
 
 .card-testimonial__text {
@@ -89,4 +109,8 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
+
+  @media screen and (max-width: $screen--768 - 1) {
+    -webkit-line-clamp: 4;
+  }
 }

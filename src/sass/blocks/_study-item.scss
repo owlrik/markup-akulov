@@ -64,4 +64,8 @@
     flex-basis: 35%;
     font-size: px-to-rem(14px);
   }
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(14px, 14px);
+  }
 }

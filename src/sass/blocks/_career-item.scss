@@ -22,7 +22,7 @@
     height: 24px;
     background-color: var(--color-white);
     border-radius: 50%;
-    border: 1px solid #bfc9c9;
+    border: 1px solid var(--color-gray-2);
 
     @media screen and (max-width: $screen--1024 - 1) {
       top: 2px;
@@ -41,7 +41,7 @@
     left: 12px;
     display: block;
     width: 1px;
-    background-color: #bfc9c9;
+    background-color: var(--color-gray-2);
 
     @media screen and (max-width: $screen--1024 - 1) {
       top: 27px;

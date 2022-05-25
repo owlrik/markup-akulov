@@ -31,4 +31,8 @@
 
 .stats-item__caption {
   font-size: px-to-rem(16px, 18px);
+
+  @media screen and (max-width: $screen--768 - 1) {
+    font-size: px-to-rem(14px, 14px);
+  }
 }

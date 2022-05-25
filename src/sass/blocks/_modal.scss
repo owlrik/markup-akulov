@@ -87,7 +87,8 @@
   }
 
   @media screen and (max-width: $screen--768 - 1) {
-    padding: px-to-rem(35px) px-to-rem(15px);
+    padding-right: px-to-rem(15px);
+    padding-left: px-to-rem(15px);
   }
 }
 
@@ -96,6 +97,16 @@
 
   @media screen and (max-width: $screen--768 - 1) {
     margin-bottom: 1em;
+  }
+}
+
+.modal__btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: px-to-rem(30px, 18px);
+
+  @media screen and (max-width: $screen--1024 - 1) {
+    margin-top: px-to-rem(20px);
   }
 }
 

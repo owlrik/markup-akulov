@@ -3,7 +3,7 @@
   justify-content: space-between;
   padding-top: px-to-rem(32px, 18px);
   padding-bottom: px-to-rem(45px, 18px);
-  border-top: 1px solid #bfc9c9;
+  border-top: 1px solid var(--color-gray-2);
 
   @media screen and (max-width: $screen--1024 - 1) {
     padding-top: px-to-rem(22px);
@@ -29,6 +29,7 @@
 
   @media screen and (max-width: $screen--768 - 1) {
     margin-bottom: 0.5em;
+    font-size: px-to-rem(12px, 14px);
   }
 
   &:last-child {
