@@ -55,8 +55,9 @@
     "stylelint-config-htmlacademy": "^0.1.12"
   },
   "browserList": [
-    "last 3 versions",
-    "IE 11"
+    "> 0.25%",
+    "last 2 versions",
+    "not IE"
   ],
   "dependencies": {
     "aos": "^3.0.0-beta.6"
