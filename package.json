@@ -1,12 +1,12 @@
 {
-  "name": "akulov-ma",
+  "name": "markup-akulov",
   "version": "1.0.0",
   "description": "Сайт-визитка врача Акулова Михаила Альбертовича",
   "author": "Vadim Tiuriumin",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git@github.com:owlrik/akulov-ma.git"
+    "url": "git@github.com:owlrik/markup-akulov.git"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development gulp start",
